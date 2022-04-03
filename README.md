@@ -1,2 +1,6 @@
-# chris-greening-blog
-Repo for storing content related to my blog posts and tutorials
+# Chris Greening's blog
+Welcome to my blog's repository! 
+
+The purpose of this repo is to organize data, source files, and additional information relating to my blog at [DEV.to](https://dev.to/chrisgreening).
+
+Check out my [website](https://www.christophergreening.com/) or <a src="mailto:chris@christophergreening.com">email me</a> if you want to get in touch!
