@@ -1,3 +1,10 @@
+![GIF scrolling Joe Biden's Instagram page](https://res.cloudinary.com/practicaldev/image/fetch/s--qGMRyeqM--/c_imagga_scale,f_auto,fl_progressive,h_420,q_66,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/wj99ls053d6ox9d9tezu.gif)
+
+# Scraping every post on an Instagram profile with less than 10 lines of Python
+[Link to the blog post](https://dev.to/chrisgreening/scraping-every-post-on-an-instagram-profile-with-less-than-10-lines-of-python-1n8b)
+
+---
+
 In this blog post, I'm going to give a quick tutorial on how you can scrape every post on an Instagram profile page using [instascrape](https://github.com/chris-greening/instascrape) with less than 10 lines of Python! 
 
 Specifically, I am going to be scraping every post from Joe Biden's Instagram account ([@joebiden](https://www.instagram.com/joebiden/?hl=en))
