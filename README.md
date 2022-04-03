@@ -13,3 +13,4 @@ Check out my [website](https://www.christophergreening.com/) or <a href="mailto:
 ## Posts
 - [I built an interactive 3D photo display with JavaScript](https://github.com/chris-greening/chris-greening-blog/tree/main/posts/I%20built%20an%20interactive%203D%20photo%20display%20with%20JavaScript)
 - [Deploying a free tier relational database with Amazon RDS](https://github.com/chris-greening/chris-greening-blog/tree/main/posts/Deploying%20a%20free%20tier%20relational%20database%20with%20Amazon%20RDS)
+- [I added a JavaScript arcade game to my portfolio's homepage](https://github.com/chris-greening/chris-greening-blog/tree/main/posts/I%20added%20a%20JavaScript%20arcade%20game%20to%20my%20portfolio's%20homepage)
