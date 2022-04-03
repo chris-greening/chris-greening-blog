@@ -1,3 +1,4 @@
+![Animated bar chart showing state vs. energy consumption in the United States per year](https://res.cloudinary.com/practicaldev/image/fetch/s--s1aJcdMI--/c_imagga_scale,f_auto,fl_progressive,h_420,q_66,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/r0vhkgstz96gy3o9fkow.gif)
 # Animating 60 years of US energy data with 10 lines of Python
 [Link to blog post](https://dev.to/chrisgreening/animating-60-years-of-us-energy-data-with-10-lines-of-python-afi)
 
