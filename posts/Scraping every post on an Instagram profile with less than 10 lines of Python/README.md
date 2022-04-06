@@ -89,6 +89,6 @@ In the meantime, here is a related article where I analyze 10,000 data points sc
 
 Click [here](https://github.com/chris-greening/instascrape/tree/master/tutorial/examples/JoeBiden) for the full code, dataset, and file containing all the URLs used in this tutorial. 
 
-If you have any questions, feel free to drop them in the comments below, message me, or email me at chris@christophergreening.com!
+If you have any questions, feel free to drop them in the comments below, message me, or contact me at [my website](https://www.christophergreening.com/)!
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/fxi3v27am3jm2xihyp3j.png)
