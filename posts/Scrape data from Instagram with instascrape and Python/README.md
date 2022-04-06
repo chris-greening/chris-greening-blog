@@ -46,3 +46,9 @@ Aside from `Profile`, we also have the `Post` and `Hashtag` objects which work w
 instascrape integrates nicely with tools like [pandas](https://pandas.pydata.org/) and [matplotlib](https://matplotlib.org/api/pyplot_summary.html) so you can scrape, explore, and analyze your data with just a few lines of code. Integration with [selenium](https://selenium-python.readthedocs.io/) is encouraged so you can get a powerful Instagram scraper going in no time!
 
 We've only just scraped the surface so dig into the [docs](https://pypi.org/project/insta-scrape/) :blue_book: or even better, check out the [source](https://github.com/chris-greening/instascrape) and contribute! Being such a young library (started Hacktoberfest 2020), the sky is the limit and it's only going to get more powerful from here :raised_hands:
+
+If you like my content be sure to check out some of my other blog posts or reach out to me on [my website].(https://www.christophergreening.com/)
+
+{% embed https://dev.to/chrisgreening/i-built-an-interactive-3d-photo-display-with-javascript-303j %}
+
+Cheers!
