@@ -12,7 +12,7 @@ Or perhaps you've been given remote access to a MySQL instance on Amazon RDS
 
 I have no idea! But I do know that you have a fancy relational database and you want to access it from Python.
 
-Let's jump into some code and learn how we can leverage SQLAlchemy and connect to a database and get moving
+Let's jump into some code and learn how we can leverage SQLAlchemy to connect to a relational database from the comfort of Python :snake:
 
 ---
 
