@@ -8,22 +8,22 @@ Congratulations!
 
 You've just created your first SQLite database
 
-Or perhaps you've been given remote access to a MySQL instance on Amazon RDS
+Or maybe you read my previous blog post on [deploying a free tier relational database with Amazon RDS](https://dev.to/chrisgreening/deploying-a-free-tier-relational-database-with-amazon-rds-3jd2) :wink:
 
-I have no idea! But I do know that you have a fancy relational database and now you want to access it
+I have no idea! But I do know that you have a fancy database and now you want to access it from the comfort of Python
 
-Let's jump into some code and learn how we can leverage SQLAlchemy to connect to a relational database from the comfort of Python :snake:
+So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as _The Database Toolkit for Python_!
 
 ![Animation showing the different parts of a SQLAlchemy connection string](./media/url%20connection%20string.gif)
 
 ---
 
-## Understanding SQLAlchemy engine configuration
+## Understanding the SQLAlchemy Engine
 
 ---
 
 ## Deconstructing the database URL
-
+<!-- The most basic function of the Engine is to provide access to a Connection, which can then invoke SQL statements. To emit a textual statement to the database looks like: -->
 ---
 
 ## Connecting to a local SQLite database
