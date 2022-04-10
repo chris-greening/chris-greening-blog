@@ -18,14 +18,32 @@ Let's jump into some code and learn how we can leverage SQLAlchemy to connect to
 
 ---
 
-## What is SQLAlchemy?!
+## Understanding SQLAlchemy engine configuration
+
+---
+
+## Deconstructing the database URL
+
+---
+
+## Connecting to a local SQLite database
+
+---
+
+## (Optional) Connecting to a remote MySQL instance on Amazon RDS
+
+---
+
+## Conclusion
+<!-- ## What is SQLAlchemy?!
 
 Yeahyeahyeah...
 
 I literally just said _"Let's jump into some code"_ and now I'm yapping and not coding but _trust me_ - the journey is more important than the destination on this one
 
-So let's step back for a moment and understand the "_why_" before we launch into the "_how_"
+So... what is SQLAlchemy?!
 
+As defined on the official website, SQLAlchemy is the "_Python SQL toolkit and Object Relational Mapper that gives application the full power and flexibility of SQL_"  -->
 
 
 ---
