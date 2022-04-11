@@ -26,6 +26,12 @@ So let's jump into some code and learn how we can leverage [SQLAlchemy's](https:
 
 ## Understanding the SQLAlchemy Engine
 
+```python
+from sqlalchemy import create_engine
+database_url = "dialect+driver://user:pass@host:port/db"
+engine = create_engine(database_url)
+```
+
 As we all know the engine is the most important component when it comes to operating (most) motor vehicles
 
 It's a complex machine that:
