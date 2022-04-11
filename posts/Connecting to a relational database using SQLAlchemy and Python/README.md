@@ -26,15 +26,16 @@ So let's jump into some code and learn how we can leverage [SQLAlchemy's](https:
 
 ## Understanding the SQLAlchemy Engine
 
-As we all know, the engine is the most important component when it comes to operating (most) motor vehicles
+As we all know the engine is the most important component when it comes to operating (most) motor vehicles
 
-It is a complex machine that:
+It's a complex machine that:
 1. takes gasoline as an input
 2. burns the gasoline
-3. converts the heat into mechanical work as an output
+3. converts the resulting heat into mechanical work as an output
 
+Just like with motor vehicles, the [Engine](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Engine) is the heart of our SQLAlchemy application
 
-
+It's the lowest level object used by SQLAlchemy and it drives the conversation forward between our Python application and a database that only understands SQL
 
 <a src="#understanding-the-sqlalchemy-engine"></a>
 
