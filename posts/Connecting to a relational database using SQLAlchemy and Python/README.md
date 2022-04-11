@@ -14,16 +14,18 @@ I have no idea! But I do know that you have a fancy database and now you want to
 
 So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as _The Database Toolkit for Python_!
 
-![Animation showing the different parts of a SQLAlchemy connection string](./media/url%20connection%20string.gif)
-
 ---
 
 ## Understanding the SQLAlchemy Engine
+
+![Animation showing the different parts of a SQLAlchemy connection string](./media/engine connection.png)
 
 ---
 
 ## Deconstructing the database URL
 <!-- The most basic function of the Engine is to provide access to a Connection, which can then invoke SQL statements. To emit a textual statement to the database looks like: -->
+![Animation showing the different parts of a SQLAlchemy connection string](./media/url%20connection%20string.gif)
+
 ---
 
 ## Connecting to a local SQLite database
