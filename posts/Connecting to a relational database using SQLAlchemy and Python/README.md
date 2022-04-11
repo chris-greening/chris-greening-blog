@@ -60,7 +60,7 @@ The important part is just understanding that we have to _create_ an _engine_ fo
 ## Creating the Engine
 <a src="#creating-the-engine"></a>
 
-So now let's go ahead and turn the metaphorical key in our car to start the engine
+So now let's go ahead and actually create the engine that our app will use
 
 ```python
 from sqlalchemy import create_engine
@@ -71,7 +71,7 @@ engine = create_engine('dialect+driver://username:password@host:port/database')
 
 Yeah!
 
-Now you might be wondering what the _HECK_ `'dialect+driver://username:password@host:port/database'` is (which we'll get to in a moment).
+Now you might be wondering where the _HECK_ `'dialect+driver://username:password@host:port/database'` comes from.. no worries! We'll get to in a moment.
 
 Just remember that `create_engine` is the crucial first step we must take to start driving the conversation with our database.
 
