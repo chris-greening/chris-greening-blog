@@ -14,40 +14,45 @@ I have no idea! But I do know that you have a fancy database and now you want to
 
 So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as _The Database Toolkit for Python_!
 
+### Table of Contents
+- [Understanding the SQLAlchemy Engine](#understanding-the-sqlalchemy-engine)
+- [Deconstructing the database URL](#deconstructing-the-database-url)
+- [Connecting to a local SQLite database](#connecting-to-a-local-sqlite-database)
+- [(Optional) Connecting to a remote MySQL instance on Amazon RDS](#connecting-to-a-relational-database-using-sqlalchemy-and-python)
+- [](#conclusion)
+- [](#additional-resources)
+
 ---
 
 ## Understanding the SQLAlchemy Engine
+<a src="#understanding-the-sqlalchemy-engine"></a>
 
-![Animation showing the different parts of a SQLAlchemy connection string](./media/engine connection.png)
+![Animation showing the different parts of a SQLAlchemy connection string](media/engine%20configuration.PNG)
 
 ---
 
 ## Deconstructing the database URL
+<a src="#deconstructing-the-database-url"></a>
 <!-- The most basic function of the Engine is to provide access to a Connection, which can then invoke SQL statements. To emit a textual statement to the database looks like: -->
 ![Animation showing the different parts of a SQLAlchemy connection string](./media/url%20connection%20string.gif)
 
 ---
 
 ## Connecting to a local SQLite database
+<a src="#connecting-to-a-local-sqlite-database"></a>
 
 ---
 
 ## (Optional) Connecting to a remote MySQL instance on Amazon RDS
+<a src="#connecting-to-a-remote-mysql-instance-on-amazon-rds"></a>
 
 ---
 
 ## Conclusion
-<!-- ## What is SQLAlchemy?!
-
-Yeahyeahyeah...
-
-I literally just said _"Let's jump into some code"_ and now I'm yapping and not coding but _trust me_ - the journey is more important than the destination on this one
-
-So... what is SQLAlchemy?!
-
-As defined on the official website, SQLAlchemy is the "_Python SQL toolkit and Object Relational Mapper that gives application the full power and flexibility of SQL_"  -->
-
+<a src="#conclusion"></a>
 
 ---
 
-##
+## Additional resources
+<a src="#additional-resources"></a>
+
