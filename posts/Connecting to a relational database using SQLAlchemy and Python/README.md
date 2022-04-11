@@ -12,7 +12,7 @@ Or maybe you read my previous blog post on [deploying a free tier relational dat
 
 {% embed https://dev.to/chrisgreening/deploying-a-free-tier-relational-database-with-amazon-rds-3jd2 %}
 
-I have no idea but however you got here - welcome! And now that you've got that fancy database I'm _sure_ you just can't wait to access it from the warm embrace of Python.
+I have no idea but however you got here - *welcome*! And now that you've got that fancy database I'm _sure_ you just can't wait to access it from the warm embrace of **Python**.
 
 So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as "_The Database Toolkit for Python_" to connect to our database!
 
@@ -25,42 +25,42 @@ So let's jump into some code and learn how we can leverage [SQLAlchemy's](https:
 - [Conclusion](#conclusion)
 - [Additional resources](#additional-resources)
 
-_:exclamation: IMPORTANT :exclamation:: This tutorial is strictly for practical learning purposes and not an exhaustive guide for setting up a production-ready environment._
+_:exclamation: IMPORTANT :exclamation:: This tutorial is strictly for **practical learning purposes** and NOT an exhaustive guide for setting up a production-ready environment._
 
-_Be sure to keep an eye out for additional :exclamation: IMPORTANT :exclamation: notes throughout this tutorial for potential security concerns, gotchas, etc_.
+_Be sure to keep an eye out for additional :exclamation: IMPORTANT :exclamation: notes throughout this tutorial for **potential security concerns, gotchas, etc**_.
 
 ---
 
 ## Understanding the SQLAlchemy Engine
 <a src="#understanding-the-sqlalchemy-engine"></a>
 
-As we all know the engine is the heart of (most) motor vehicles.
+As we all know the engine is the **heart** of (most) motor vehicles.
 
 It's a complex machine that:
-1. takes gasoline as an input
+1. takes gasoline as an **input**
 2. burns the gasoline
-3. converts the resulting heat into mechanical work as an output
+3. converts the resulting heat into mechanical work as an **output**
 
-And just like with motor vehicles, the [`Engine`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Engine) is the heart of SQLAlchemy.
+And just like with motor vehicles, the [`Engine`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Engine) is the **heart** of SQLAlchemy.
 
-It's the lowest level object used by SQLAlchemy to drive the conversation between our Python application and database(s).
+It's the **lowest level object** used by SQLAlchemy to **drive** the conversation between our Python application and database(s).
 
 ![Image showing the different layers between the database and our connection](media/engine%20configuration.PNG)
 
 Without going into too much detail, the `Engine` creates a:
-- [`Dialect`](https://docs.sqlalchemy.org/en/14/dialects/) object that handles communication and a
-- [`Pool`](https://docs.sqlalchemy.org/en/14/core/pooling.html#sqlalchemy.pool.Pool) object that handles connection.
+- [`Dialect`](https://docs.sqlalchemy.org/en/14/dialects/) object that handles **communication** and a
+- [`Pool`](https://docs.sqlalchemy.org/en/14/core/pooling.html#sqlalchemy.pool.Pool) object that handles **connection**.
 
-These in turn work with the [DBAPI](https://docs.sqlalchemy.org/en/14/glossary.html#term-DBAPI) to translate information in and out of the database and to and from our app.
+These in turn work with the [DBAPI](https://docs.sqlalchemy.org/en/14/glossary.html#term-DBAPI) to **translate information** in and out of the database and to and from our app.
 
 Don't worry too much about details for now!
 
-The important part is just understanding that we have to _create_ an _engine_ for giving our Python app the means to drive the conversation with our SQL database.
+The important part is just understanding that we have to **create** an **engine** for giving our Python app the means to drive the conversation with our SQL database.
 
 ## Creating the Engine
 <a src="#creating-the-engine"></a>
 
-So now let's go ahead and actually create the engine that our app will use
+So now let's go ahead and actually **create the engine** that our app will use
 
 ```python
 from sqlalchemy import create_engine
@@ -73,7 +73,7 @@ Yeah!
 
 Now you might be wondering where the _HECK_ `'dialect+driver://username:password@host:port/database'` comes from.. no worries! We'll get to in a moment.
 
-Just remember that `create_engine` is the crucial first step we must take to start driving the conversation with our database.
+Just remember that `create_engine` is the crucial first step we must take to establish a homebase for communicating with our database.
 
 ---
 
