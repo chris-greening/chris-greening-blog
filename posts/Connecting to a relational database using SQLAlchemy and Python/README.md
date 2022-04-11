@@ -12,20 +12,33 @@ Or maybe you read my previous blog post on [deploying a free tier relational dat
 
 I have no idea! But I do know that you have a fancy database and now you want to access it from the comfort of Python
 
-So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as _The Database Toolkit for Python_!
+So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as "_The Database Toolkit for Python_" to connect to a database!
 
 ### Table of Contents
 - [Understanding the SQLAlchemy Engine](#understanding-the-sqlalchemy-engine)
 - [Deconstructing the database URL](#deconstructing-the-database-url)
 - [Connecting to a local SQLite database](#connecting-to-a-local-sqlite-database)
 - [(Optional) Connecting to a remote MySQL instance on Amazon RDS](#connecting-to-a-relational-database-using-sqlalchemy-and-python)
-- [](#conclusion)
-- [](#additional-resources)
+- [Conclusion](#conclusion)
+- [Additional resources](#additional-resources)
 
 ---
 
 ## Understanding the SQLAlchemy Engine
+
+As we all know, the engine is the most important component when it comes to operating (most) motor vehicles
+
+It is a complex machine that:
+1. takes gasoline as an input
+2. burns the gasoline
+3. converts the heat into mechanical work as an output
+
+
+
+
 <a src="#understanding-the-sqlalchemy-engine"></a>
+
+
 
 ![Animation showing the different parts of a SQLAlchemy connection string](media/engine%20configuration.PNG)
 
