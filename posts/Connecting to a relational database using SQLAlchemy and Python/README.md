@@ -70,7 +70,7 @@ The important part here is just understanding that we have to **create** that **
 
 ![Animation showing the different parts of a SQLAlchemy connection string](./media/url%20connection%20string.gif)
 
-Now back to the analogy of motor vehicles when we turn on our engine it's often because we have a **destination** in mind that we want to drive to
+Now back to the analogy of motor vehicles... when we turn on our engine it's often because we have a **destination** in mind that we want to drive to
 
 To get there we have to know things like:
 1. **how** are we getting there?
