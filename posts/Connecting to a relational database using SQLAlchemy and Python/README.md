@@ -79,16 +79,16 @@ To get there we have to know things like:
 
 And in the context of SQLAlchemy, this is where our **database URL** comes in
 
-A typical database URL might look something (but not always exactly) like this:
+A typical **database URL** might look something (but not always exactly) like this:
 `dialect+driver://username:password@host:port/database`
 
 Feeding this to our instance of `Engine`, we're able to inform SQLAlchemy crucial information such as:
-- `dialect+driver`: Is our database MySQL, PostgreSQL, etc? what DBAPI should our `Engine` connect to?
-- `username:password`: What credentials do we need to connect to our database?
-- `host:port`: Where is our database?
-- `database`: What is the name of our database?
+- `dialect+driver`: Is our database **MySQL, PostgreSQL, etc**? what **DBAPI** should our `Engine` connect to?
+- `username:password`: What **credentials** do we need to connect to our database?
+- `host:port`: **Where** is our database?
+- `database`: What is the **name** of our database?
 
-So now let's take a look at a couple examples of what an actual database URL could look like:
+So now let's take a look at a couple examples of what an **actual database URL** could look like:
 
 ```python
 # Connect to a local SQLite database
@@ -105,11 +105,11 @@ DATABASE_URL = "mysql+pymysql://chris:pa$$w0rd@insert-your-database-name.abcdefg
 DATABASE_URL = "postgresql+pg8000://user:pa$$w0rd@12.34.56.789/mydatabase?charset=utf8mb4
 ```
 
-For additional information and usecases regarding the database URL, feel free to check out some of the [official SQLAlchemy documentation](https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls) on the subject!
+For **additional information** and usecases regarding the database URL, feel free to check out some of the [official SQLAlchemy documentation](https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls) on the subject!
 
-_:exclamation: IMPORTANT :exclamation:: Publicly exposing your database to the internet and/or establishing unencrypted connections opens up attack vectors that make your database and application vulnerable._
+_:exclamation: IMPORTANT :exclamation:: Publicly exposing your database to the internet and/or establishing unencrypted connections opens up **attack vectors** that make your database and application vulnerable._
 
-_Reminder that this tutorial is not an exhaustive guide on setting up a secure production environment._
+_Reminder that this tutorial is **NOT** an exhaustive guide for setting up a secure production environment._
 
 ---
 
@@ -127,7 +127,9 @@ engine = create_engine(DATABASE_URL)
 
 Yeah! That's it!
 
-It's worth mentioning that `Engine` (and more specifically the internal `Pool`) have a *lazy initialization*. They don't establish that first DBAPI connection until we explicitly [`connect`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Engine.connect) or call an operation that uses `connect` internally such as [`execute`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Connection.execute)
+It's worth mentioning that `Engine` (and more specifically the internal `Pool`) have a **lazy initialization**. They don't establish that first DBAPI connection until we explicitly [`connect`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Engine.connect) or call an operation that uses `connect` internally such as [`execute`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Connection.execute)
+
+For **additional information** and usecases regarding `create_engine`, feel free to check out some of the [official SQLAlchemy documentation](https://docs.sqlalchemy.org/en/14/core/engines.html) on the subject!
 
 ---
 
