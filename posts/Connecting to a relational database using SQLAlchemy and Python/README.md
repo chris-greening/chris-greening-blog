@@ -73,9 +73,9 @@ The important part here is just understanding that we have to **create** that **
 Now back to the analogy of motor vehicles... when we turn on our engine it's often because we have a **destination** in mind that we want to drive to
 
 To get there we have to know things like:
-1. **how** are we getting there?
-2. **where** are we going?
-3. **what** additional info do we need?
+1. **How** are we getting there?
+2. **Where** are we going?
+3. **What** additional information do we need?
 
 And in the context of SQLAlchemy, this is where our **database URL** comes in
 
@@ -83,12 +83,12 @@ A typical database URL might look something (but not always exactly) like this:
 `dialect+driver://username:password@host:port/database`
 
 Feeding this to our instance of `Engine`, we're able to inform SQLAlchemy crucial information such as:
-- `dialect+driver`: is our database MySQL, PostgreSQL, etc? what DBAPI should our `Engine` connect to?
-- `username:password`: what credentials do we need to connect to our database?
-- `host:port`: where is our database?
-- `database`: what is the name of our database?
+- `dialect+driver`: Is our database MySQL, PostgreSQL, etc? what DBAPI should our `Engine` connect to?
+- `username:password`: What credentials do we need to connect to our database?
+- `host:port`: Where is our database?
+- `database`: What is the name of our database?
 
-Let's take a look at a couple examples of what an actual database URL could look like:
+So now let's take a look at a couple examples of what an actual database URL could look like:
 
 ```python
 # Connect to a local SQLite database
