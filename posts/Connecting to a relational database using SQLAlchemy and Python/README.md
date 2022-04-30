@@ -23,7 +23,6 @@ So let's jump into some code and learn how we can leverage [SQLAlchemy's](https:
 - [Creating the Engine]()
 - [Deconstructing the database URL](#deconstructing-the-database-url)
 - [Connecting to a local SQLite database](#connecting-to-a-local-sqlite-database)
-- [(Optional) Connecting to a remote MySQL instance on Amazon RDS](#connecting-to-a-relational-database-using-sqlalchemy-and-python)
 - [Conclusion](#conclusion)
 - [Additional resources](#additional-resources)
 
@@ -136,10 +135,7 @@ For **additional information** and usecases regarding `create_engine`, feel free
 ## Connecting to a local SQLite database
 <a src="#connecting-to-a-local-sqlite-database"></a>
 
----
 
-## (Optional) Connecting to a remote MySQL instance on Amazon RDS
-<a src="#connecting-to-a-remote-mysql-instance-on-amazon-rds"></a>
 
 ---
 
