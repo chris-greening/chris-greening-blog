@@ -107,6 +107,10 @@ DATABASE_URL = "postgresql+pg8000://user:pa$$w0rd@12.34.56.789/mydatabase?charse
 
 For additional information and usecases regarding the database URL, feel free to check out some of the [official SQLAlchemy documentation](https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls) on the subject!
 
+_:exclamation: IMPORTANT :exclamation:: Publicly exposing your database to the internet and/or establishing unencrypted connections opens up attack vectors that make your database and application vulnerable._
+
+_Reminder that this tutorial is not an exhaustive guide on setting up a secure production environment._
+
 ---
 
 ## Creating the Engine
