@@ -100,6 +100,11 @@ DATABASE_URL = "sqlite:///spam.db'
 DATABASE_URL = "mysql+pymysql://chris:pa$$w0rd@insert-your-database-name.abcdefgh.us-east-1.rds.amazonaws.com:3306/mydatabase"
 ```
 
+```python
+# Connect to a remote PostgreSQL database and pass additional parameters
+DATABASE_URL = "postgresql+pg8000://user:pa$$w0rd@12.34.56.789/mydatabase?charset=utf8mb4
+```
+
 For additional information and usecases regarding the database URL, feel free to check out some of the [official SQLAlchemy documentation](https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls) on the subject!
 
 ---
@@ -116,9 +121,9 @@ engine = create_engine(DATABASE_URL)
 
 "Wait - _that's it_?"
 
-Yeah!
+Yeah! That's it!
 
-
+It's worth mentioning that `Engine` (and more specifically the internal `Pool`) have a *lazy initialization*. They don't establish that first DBAPI connection until we explicitly [`connect`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Engine.connect) or call an operation that uses `connect` internally such as [`execute`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Connection.execute)
 
 ---
 
