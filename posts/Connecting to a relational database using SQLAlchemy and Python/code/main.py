@@ -1,12 +1,10 @@
 # Author: Chris Greening
 # Date: 2022-04-30
 # Purpose: Supplementary example project for using SQLAlchemy
-# to create and query a simple local SQLite database
+# to create, seed, and query a simple local SQLite database
 
-import os
 import csv
 from typing import List
-from matplotlib.pyplot import connect
 
 import sqlalchemy
 from sqlalchemy import create_engine, text
