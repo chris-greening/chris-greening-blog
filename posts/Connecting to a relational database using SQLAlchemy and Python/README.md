@@ -19,6 +19,7 @@ And now that you've got that fancy database I'm _sure_ you just can't wait to ac
 So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as "_The Database Toolkit for Python_" to connect to our database!
 
 ### Table of Contents
+<a src="#table-of-contents"></a>
 - [Understanding the SQLAlchemy Engine](#understanding-the-sqlalchemy-engine)
 - [Creating the Engine]()
 - [Deconstructing the database URL](#deconstructing-the-database-url)
@@ -135,7 +136,7 @@ For **additional information** and usecases regarding `create_engine`, feel free
 ## Executing a SQL query from Python
 <a src="#executing-a-sql-query-from-python"></a>
 
-And now that we've instantiated our `Engine`, we're ready to use it to query our database and parse its response into usable data in Python!
+And now that we've instantiated our `Engine`, we're ready to use it to **query our database** and parse its response into **usable data** in Python!
 
 ```python
 from sqlalchemy import text
@@ -155,13 +156,46 @@ In the above code snippet our `Engine` (and its internal references) have:
 - **returned and translated** the DBAPI's response into something Python can understand
 - **looped through each row** and printed the title of every blog post
 
+Pretty nifty, eh?
+
+---
+
+## Try it yourself!
+
+As an addition to this blog post, I've **published a small project** on GitHub that uses SQLAlchemy to:
+- create a local SQLite **database**
+- create a **table**
+- **seed** the database with data from a CSV
+- perform simple **queries**
+
+![Sample code that uses SQLAlchemy](./media/sample_code.PNG)
+
+[Click here to check it out](https://github.com/chris-greening/chris-greening-blog/blob/main/posts/Connecting%20to%20a%20relational%20database%20using%20SQLAlchemy%20and%20Python/code/main.py) and be sure to tinker around with the code to get the most out of this tutorial!
+
 ---
 
 ## Conclusion
 <a src="#conclusion"></a>
+
+In this tutorial we covered one of the most critical aspects of using SQLAlchemy: _connecting to our database_
+
+And this only scratched the surface of what we can accomplish with SQLAlchemy - I highly recommend **digging deeper** and learning more about what SQLAlchemy has to offer (such as its capabilities as an [Object Relational Mapper](https://docs.sqlalchemy.org/en/14/orm/))!
+
+Thanks so much for reading and if you liked my content, be sure to check out some of my other work or connect with me on social media or my [personal website](https://www.christophergreening.com/) :smile:
+
+Cheers!
+
+[Back to the top :arrow_heading_up:](#table-of-contents)
+
+{% embed https://dev.to/chrisgreening/deploying-a-free-tier-relational-database-with-amazon-rds-3jd2 %}
 
 ---
 
 ## Additional resources
 <a src="#additional-resources"></a>
 
+- [SQLAlchemy Official Website](https://www.sqlalchemy.org/)
+- [Python Flask Tutorial: Full-Featured Web App Part 4 - Databaes with Flask-SQLAlchemy (Youtube)](https://www.youtube.com/watch?v=cYWiDiIUxQc&ab_channel=CoreySchafer)
+- [SQLAlchemy - Python Tutorial](https://towardsdatascience.com/sqlalchemy-python-tutorial-79a577141a91)
+- [SQLAlchemy Github](https://github.com/sqlalchemy/sqlalchemy)
+- [SQLAlchemy Tutorial](https://www.tutorialspoint.com/sqlalchemy/index.htm)
