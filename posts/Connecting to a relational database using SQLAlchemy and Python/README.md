@@ -22,7 +22,7 @@ So let's jump into some code and learn how we can leverage [SQLAlchemy's](https:
 - [Understanding the SQLAlchemy Engine](#understanding-the-sqlalchemy-engine)
 - [Creating the Engine]()
 - [Deconstructing the database URL](#deconstructing-the-database-url)
-- [Connecting to a local SQLite database](#connecting-to-a-local-sqlite-database)
+- [Executing a SQL query from Python](#executing-a-sql-query-from-python)
 - [Conclusion](#conclusion)
 - [Additional resources](#additional-resources)
 
@@ -132,10 +132,10 @@ For **additional information** and usecases regarding `create_engine`, feel free
 
 ---
 
-## Connecting to a local SQLite database
-<a src="#connecting-to-a-local-sqlite-database"></a>
+## Executing a SQL query from Python
+<a src="#executing-a-sql-query-from-python"></a>
 
-
+And now that we've created our `Engine`, we're ready to now execute some SQL
 
 ---
 
