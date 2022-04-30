@@ -12,7 +12,7 @@ Or maybe you read my previous blog post on [deploying a free tier relational dat
 
 {% embed https://dev.to/chrisgreening/deploying-a-free-tier-relational-database-with-amazon-rds-3jd2 %}
 
-In whatever way you've arrived here - *welcome*!
+In however way you've arrived here - *welcome*!
 
 And now that you've got that fancy database I'm _sure_ you just can't wait to access it from the warm embrace of **Python**.
 
