@@ -135,7 +135,15 @@ For **additional information** and usecases regarding `create_engine`, feel free
 ## Executing a SQL query from Python
 <a src="#executing-a-sql-query-from-python"></a>
 
-And now that we've created our `Engine`, we're ready to now execute some SQL
+And now that we've instantiated our `Engine`, we're ready to use it to query our database and parse its response into usable data in Python!
+
+```python
+from sqlalchemy import text
+
+with engine.connect() as connection:
+    query = "SELECT * FROM chris_greenings_blog"
+    blog_posts = connection.execute(text(query))
+```
 
 ---
 
