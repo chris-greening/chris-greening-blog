@@ -100,12 +100,14 @@ DATABASE_URL = "sqlite:///spam.db'
 DATABASE_URL = "mysql+pymysql://chris:pa$$w0rd@insert-your-database-name.abcdefgh.us-east-1.rds.amazonaws.com:3306/mydatabase"
 ```
 
+For additional information and usecases regarding the database URL, feel free to check out some of the [official SQLAlchemy documentation](https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls) on the subject!
+
 ---
 
 ## Creating the Engine
 <a src="#creating-the-engine"></a>
 
-So now let's go ahead and **create the engine**!
+So now let's go ahead and actually **create the engine**!
 
 ```python
 from sqlalchemy import create_engine
@@ -116,9 +118,7 @@ engine = create_engine(DATABASE_URL)
 
 Yeah!
 
-Now you likely noticed that we haven't
 
-Let's deconstruct what this **database URL** is
 
 ---
 
