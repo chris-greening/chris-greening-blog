@@ -12,7 +12,9 @@ Or maybe you read my previous blog post on [deploying a free tier relational dat
 
 {% embed https://dev.to/chrisgreening/deploying-a-free-tier-relational-database-with-amazon-rds-3jd2 %}
 
-I have no idea but however you got here - *welcome*! And now that you've got that fancy database I'm _sure_ you just can't wait to access it from the warm embrace of **Python**.
+In whatever way you've arrived here - *welcome*!
+
+And now that you've got that fancy database I'm _sure_ you just can't wait to access it from the warm embrace of **Python**.
 
 So let's jump into some code and learn how we can leverage [SQLAlchemy's](https://www.sqlalchemy.org/) capabilities as "_The Database Toolkit for Python_" to connect to our database!
 
@@ -25,7 +27,7 @@ So let's jump into some code and learn how we can leverage [SQLAlchemy's](https:
 - [Conclusion](#conclusion)
 - [Additional resources](#additional-resources)
 
-_:exclamation: IMPORTANT :exclamation:: This tutorial is strictly for **practical learning purposes** and NOT an exhaustive guide for setting up a production-ready environment._
+_:exclamation: IMPORTANT :exclamation:: This tutorial is strictly for **practical learning purposes** and NOT an exhaustive guide for setting up a secure production-ready environment._
 
 _Be sure to keep an eye out for additional :exclamation: IMPORTANT :exclamation: notes throughout this tutorial for **potential security concerns, gotchas, etc**_.
 
@@ -39,52 +41,84 @@ As we all know the engine is the **heart** of (most) motor vehicles.
 It's a complex machine that:
 1. takes gasoline as an **input**
 2. burns the gasoline
-3. converts the resulting heat into mechanical work as an **output**
+3. and converts the resulting heat into mechanical work as an **output**
 
 And just like with motor vehicles, the [`Engine`](https://docs.sqlalchemy.org/en/14/core/connections.html#sqlalchemy.engine.Engine) is the **heart** of SQLAlchemy.
 
-It's the **lowest level object** used by SQLAlchemy to **drive** the conversation between our Python application and database(s).
+It's the **lowest level object** used by SQLAlchemy and it helps **drive** the conversation between our Python application and database(s).
 
 ![Image showing the different layers between the database and our connection](media/engine%20configuration.PNG)
 
-Without going into too much detail, the `Engine` creates a:
+Without going into too much detail, the `Engine`
+internally references a:
 - [`Dialect`](https://docs.sqlalchemy.org/en/14/dialects/) object that handles **communication** and a
 - [`Pool`](https://docs.sqlalchemy.org/en/14/core/pooling.html#sqlalchemy.pool.Pool) object that handles **connection**.
 
-These in turn work with the [DBAPI](https://docs.sqlalchemy.org/en/14/glossary.html#term-DBAPI) to **translate information** in and out of the database and to and from our app.
+These in turn work with the [DBAPI](https://docs.sqlalchemy.org/en/14/glossary.html#term-DBAPI) behind the scenes to **translate information** to and from our app and database.
 
-Don't worry too much about details for now!
+The `Engine` is a complex piece of software that:
+1. takes **input** from our Python app
+2. processes the information
+3. and converts it into **output** that our SQL database can understand
 
-The important part is just understanding that we have to **create** an **engine** for giving our Python app the means to drive the conversation with our SQL database.
+Don't sweat the details when you're first learning! :sweat_smile:
+
+The important part here is just understanding that we have to **create** that **engine** for our app to use
+
+## Deconstructing the database URL
+<a src="#deconstructing-the-database-url"></a>
+
+![Animation showing the different parts of a SQLAlchemy connection string](./media/url%20connection%20string.gif)
+
+Now back to the analogy of motor vehicles, when we turn on our engine it's often because we have a **destination** in mind that we want to drive to
+
+To get there we have to know things like:
+1. **how** are we getting there?
+2. **where** are we going?
+3. **what** additional info do we need?
+
+And in the context of SQLAlchemy, this is where our **database URL** comes in
+
+A typical database URL might look something (but not always exactly) like this:
+`dialect+driver://username:password@host:port/database`
+
+Feeding this to our instance of `Engine`, we're able to inform SQLAlchemy crucial information such as:
+- `dialect+driver`: is our database MySQL, PostgreSQL, etc? what DBAPI should our `Engine` connect to?
+- `username:password`: what credentials do we need to connect to our database?
+- `host:port`: where is our database?
+- `database`: what is the name of our database?
+
+Let's take a look at a couple examples of what an actual database URL could look like:
+
+```python
+# Connect to a local SQLite database
+DATABASE_URL = "sqlite:///spam.db'
+```
+
+```python
+# Connect to a remote MySQL instance on Amazon RDS
+DATABASE_URL = "mysql+pymysql://chris:pa$$w0rd@insert-your-database-name.abcdefgh.us-east-1.rds.amazonaws.com:3306/mydatabase"
+```
+
+---
 
 ## Creating the Engine
 <a src="#creating-the-engine"></a>
 
-So now let's go ahead and actually **create the engine** that our app will use
+So now let's go ahead and **create the engine**!
 
 ```python
 from sqlalchemy import create_engine
-engine = create_engine('dialect+driver://username:password@host:port/database')
+engine = create_engine(DATABASE_URL)
 ```
 
 "Wait - _that's it_?"
 
 Yeah!
 
-Now you might be wondering where the _HECK_ `'dialect+driver://username:password@host:port/database'` comes from.. no worries! We'll get to in a moment.
+Now you likely noticed that we haven't
 
-Just remember that `create_engine` is the crucial first step we must take to establish a homebase for communicating with our database.
-
----
-
-## Deconstructing the database URL
-<a src="#deconstructing-the-database-url"></a>
-<!-- The most basic function of the Engine is to provide access to a Connection, which can then invoke SQL statements. To emit a textual statement to the database looks like: -->
-![Animation showing the different parts of a SQLAlchemy connection string](./media/url%20connection%20string.gif)
-
-Now that we know _how_ to create the engine, we have to tell our engine _what_ and _where_ it's connecting to.
-
-
+Let's deconstruct what this **database URL** is
 
 ---
 
