@@ -78,7 +78,7 @@ To get there we have to know things like:
 
 And in the context of SQLAlchemy, this is where our **database URL** comes in
 
-A typical **database URL** might look something (but not always exactly) like this:
+A typical **database URL** might look something (but not exactly) like this:
 `dialect+driver://username:password@host:port/database`
 
 Feeding this to our instance of `Engine`, we're able to inform SQLAlchemy crucial information such as:
@@ -106,7 +106,7 @@ DATABASE_URL = "postgresql+pg8000://user:pa$$w0rd@12.34.56.789/mydatabase?charse
 
 For **additional information** and usecases regarding the database URL, feel free to check out some of the [official SQLAlchemy documentation](https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls) on the subject!
 
-_:exclamation: IMPORTANT :exclamation:: Publicly exposing your database to the internet and/or establishing unencrypted connections opens up **attack vectors** that make your database and application vulnerable._
+_:exclamation: IMPORTANT :exclamation:: Publicly exposing your database to the internet and/or establishing unencrypted connections opens up **attack vectors** that make your database and application **vulnerable**._
 
 _Reminder that this tutorial is **NOT** an exhaustive guide for setting up a secure production environment._
 
@@ -140,10 +140,20 @@ And now that we've instantiated our `Engine`, we're ready to use it to query our
 ```python
 from sqlalchemy import text
 
+# Loop through every row in table chris_greenings_blog
 with engine.connect() as connection:
-    query = "SELECT * FROM chris_greenings_blog"
-    blog_posts = connection.execute(text(query))
+    query = text("SELECT * FROM chris_greenings_blog")
+    blog_posts = connection.execute(query)
+    for post in blog_posts:
+        print(post["title"])
 ```
+
+In the above code snippet our `Engine` (and its internal references) have:
+- established a **connection** to our database
+- **translated** our Python textual `str` query into something the DBAPI can understand
+- **executed** the query
+- **returned and translated** the DBAPI's response into something Python can understand
+- **looped through each row** and printed the title of every blog post
 
 ---
 
