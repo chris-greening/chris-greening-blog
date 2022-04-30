@@ -6,7 +6,7 @@
 
 Welcome!
 
-Perhaps you just created your first SQLite database.
+Perhaps you've just created your first SQLite database.
 
 Or maybe you read my previous blog post on [deploying a free tier relational database with Amazon RDS](https://dev.to/chrisgreening/deploying-a-free-tier-relational-database-with-amazon-rds-3jd2) :wink:
 
