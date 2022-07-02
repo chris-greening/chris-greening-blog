@@ -1,4 +1,4 @@
-# Performing multiple joins in R with beautiful tidyverse code
+# Supercharging multiple join operations in R with beautiful tidyverse code
 
 Joining structured data on shared columns is one of the most common tasks in data preparation
 
@@ -6,4 +6,18 @@ And while it's fine to hardcode our join statements for two or three tables, wha
 
 This is where the reduce operation shines!
 
-So let's jump right into the code and learn how we can leverage R and the tidyverse to join an arbitrary number of datasets on shared columns with elegant, readable code 
+So let's explore how we can leverage R and the tidyverse to join an arbitrary number of datasets on shared columns with elegant, readable code 
+
+## Table of Contents 
+
+## What is the tidyverse?
+
+## Joining two datasets with dplyr
+
+## Understanding the reduce operation
+
+## Leveraging the reduce operation to join multiple datasets
+
+## Conclusion
+
+## Additional resources
