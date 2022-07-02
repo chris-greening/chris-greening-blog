@@ -30,5 +30,3 @@ livestock.data <- list.files("data/eurostat_livestock_data/", full.names = TRUE)
       tidyr::pivot_wider(names_from = animals, values_from = OBS_VALUE)
   }) %>%
   purrr::reduce(~dplyr::full_join(.x, .y, by=c("geo", "TIME_PERIOD")))
-
-
