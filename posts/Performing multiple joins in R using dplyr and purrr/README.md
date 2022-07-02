@@ -6,4 +6,4 @@ And while it's fine to hardcode our join statements for two or three tables, wha
 
 This is where the reduce operation shines!
 
-So let's jump right into the code and learn how we can leverage R and the tidyverse to write elegant, readable code that can join an arbitrary number of datasets on shared columns 
+So let's jump right into the code and learn how we can leverage R and the tidyverse to join an arbitrary number of datasets on shared columns with elegant, readable code 
