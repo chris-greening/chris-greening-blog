@@ -1,4 +1,4 @@
-# Supercharging multiple join operations in R with beautiful tidyverse code
+# Supercharging multiple join operations on the same column in R with beautiful tidyverse code
 
 Joining structured data on shared columns is an incredibly common task in data preparation
 
