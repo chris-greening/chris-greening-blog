@@ -55,7 +55,7 @@ Our task is to join these datasets by `country` and `year` into a single `livest
 
 ## Using dplyr::full_join to join two datasets at a time
 
-Let's start with a manual, naive approach of joining our datasets one by one
+Let's start with a manual, naive approach of joining our datasets one-by-one
 
 This approach chains the output of each join statement as input for each subsequent join, incrementally building our dataset
 
