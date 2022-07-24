@@ -6,9 +6,11 @@ So let's explore how we can leverage R and the tidyverse to join an arbitrary nu
 
 ## Table of Contents 
 
-## Examining our sample livestock datasets
+## Installing and importing libraries
 
-For the following examples, I'm using real-world agricultural data sourced via Eurostat containing the number of specific livestock animals in a `country` during a given `year` (in this case `swine`, `bovine`, `sheep`, and `goats`)
+## Examining our sample datasets
+
+For the following examples, we'll be using real-world agricultural data sourced via Eurostat containing the number of specific livestock animals in a `country` during a given `year` (in this case `swine`, `bovine`, `sheep`, and `goats`)
 
 For example, here is the `goats` dataset
 ```R
@@ -29,7 +31,7 @@ For example, here is the `goats` dataset
 # … with 1,312 more rows
 ```
 
-Our task is to join these datasets by `country` and `year` into a single `livestock.data` table containing all the animals
+Our task is to join these datasets by `country` and `year` into a single `livestock.data` variable containing all the animals
 
 ```R
 > livestock.data
@@ -49,9 +51,16 @@ Our task is to join these datasets by `country` and `year` into a single `livest
 # … with 1,312 more rows
 ```
 
-## Joining two datasets at a time
+## Using dplyr::full_join to join two datasets at a time
 
-Let's start by joining just two datasets using dplyr::full_join
+Let's start with the naive approach of joining our datasets two at a time.
+
+```R
+livestock.data <- bovine %>%
+  dplyr::full_join(goats, by=c("country", "year")) %>%
+  dplyr::full_join(swine, by=c("country", "year")) %>%
+  dplyr::full_join(sheep, by=c("country", "year"))
+```
 
 ## Understanding the reduce operation
 
