@@ -8,6 +8,8 @@ So let's explore how we can leverage R and the tidyverse to join an arbitrary nu
 
 ## Installing and importing libraries
 
+This example will be using
+
 ## Examining our sample datasets
 
 For the following examples, we'll be using real-world agricultural data sourced via Eurostat containing the number of specific livestock animals in a `country` during a given `year` (in this case `swine`, `bovine`, `sheep`, and `goats`)
@@ -53,13 +55,15 @@ Our task is to join these datasets by `country` and `year` into a single `livest
 
 ## Using dplyr::full_join to join two datasets at a time
 
-Let's start with the naive approach of joining our datasets two at a time.
+Let's start with a couple naive approaches of joining our datasets two at a time to help us appreciate and understand why we use purrr::reduce
+
+This first approach creates `livestock.data` and then subsequently feeds `livestock.data` into the following joins to incorporate the rema
 
 ```R
-livestock.data <- bovine %>%
-  dplyr::full_join(goats, by=c("country", "year")) %>%
-  dplyr::full_join(swine, by=c("country", "year")) %>%
-  dplyr::full_join(sheep, by=c("country", "year"))
+by = c("country", "year")
+livestock.data <- dplyr::full_join(bovine, goats, by=by)
+livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
+livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
 ## Understanding the reduce operation
