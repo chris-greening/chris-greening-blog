@@ -2,13 +2,15 @@
 
 Joining multiple datasets on the same column is a common pattern in data preparation
 
-So let's explore how we can leverage R and the tidyverse to join an arbitrary number of datasets on a shared column with elegant, readable code
+So let's explore how we can leverage R and the tidyverse to join an arbitrary number of datasets on a shared column with elegant, readable code!
 
 ## Table of Contents 
 
 ## Installing prerequisite packages
 
 In this tutorial we'll be using dplyr and purrr from the popular tidyverse collection of packages
+
+The following line of code will install them on your machine if they aren't already:
 
 ```R
 install.packages(c("dplyr", "purrr"))
@@ -59,7 +61,7 @@ Our goal is to join these datasets by `country` and `year` into a single `livest
 
 ## Using dplyr::full_join to manually join two datasets at a time
 
-Let's start with a manual, naive approach and manually join our datasets one-by-one
+Let's start with a naive approach and manually join our datasets one-by-one
 
 ```R
 by = c("country", "year")
@@ -68,7 +70,9 @@ livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
-In the above code we chain the output of each join statement as input for the next - incrementally building our dataset
+In the above code we chain the output (`livestock.data`) of each join statement as input for the next - incrementally building our dataset
+
+While this might work for four datasets, what if we had 100 datasets? Suddenly not a great solution - let's investigate how we can improve and scale this
 
 ## Understanding the reduce operation
 
@@ -78,9 +82,9 @@ Sound familiar? This is almost exactly what we just performed manually when buil
 
 ## Leveraging purrr::reduce to join multiple datasets
 
-purrr is a package that enhances R's functional programming toolkit for working with functions and vectors
+purrr is a package that enhances R's functional programming toolkit for working with functions and vectors (i.e. purrr::reduce)
 
-In this case, we're going to use purrr::reduce in conjunction with dplyr::full_join to join all of our datasets in one line of concise, readable code
+In this case, we're going to use purrr::reduce in conjunction with  dplyr::full_join to join all of our datasets in one line of concise, readable code
 
 ```R
 livestock.data <- purrr::reduce(
@@ -88,6 +92,22 @@ livestock.data <- purrr::reduce(
     ~ dplyr::full_join(.x, .y, by=c("country", "year"))
 )
 ```
+
+Let's break down the arguments that we just passed
+
+First, we started with a list of our datasets
+
+```R
+list(bovine, goats, swine, sheep)
+```
+
+And followed with an inline anonymous function that iteratively joins the output from each step into the input of the next (for more information on purrr's inline anonymous functions, see [here](https://adv-r.hadley.nz/functionals.html#purrr-shortcuts))
+
+
+```R
+~ dplyr::full_join(.x, .y, by=c("country", "year"))
+```
+
 
 ## Conclusion
 
