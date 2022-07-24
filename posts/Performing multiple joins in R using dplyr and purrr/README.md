@@ -5,8 +5,16 @@ Joining multiple datasets on the same column is a common pattern in data prepara
 So let's explore how we can leverage R and the tidyverse to join an arbitrary number of datasets on a shared column with elegant, readable code!
 
 ## Table of Contents 
+- [Installing prerequisite packages](#installing-prerequisite-packages)
+- [Examining our sample datasets](#examining-our-sample-datasets)
+- [Using dplyr to manually join two datasets at a time](#using-dplyr)
+- [Understanding the reduce operation](#understanding-the-reduce-operation)
+- [Leveraging purrr to join multiple datasets](#leveraging-purrr-reduce)
+- [Conclusion](#conclusion)
+- [Additional resources](#additional-resources)
 
 ## Installing prerequisite packages
+<a src="#installing-prerequisite-packages"></a>
 
 In this tutorial we'll be using dplyr and purrr from the popular tidyverse collection of packages
 
@@ -17,6 +25,7 @@ install.packages(c("dplyr", "purrr"))
 ```
 
 ## Examining our sample datasets
+<a src="#examining-our-sample-datasets"></a>
 
 For the following examples, we'll be using real-world agricultural data sourced via Eurostat containing the number of specific livestock animals (`swine`, `bovine`, `sheep`, and `goats`) in a `country` during a given `year`
 
@@ -60,6 +69,7 @@ Our goal is to join these datasets by `country` and `year` into a single `livest
 ```
 
 ## Using dplyr::full_join to manually join two datasets at a time
+<a src="#using-dplyr"></a>
 
 Let's start with a naive approach and manually join our datasets one-by-one
 
@@ -75,12 +85,14 @@ In the above code we chain the output (`livestock.data`) of each join statement 
 While this might work for four datasets, what if we had 100 datasets? Suddenly not a great solution - let's investigate how we can improve and scale this
 
 ## Understanding the reduce operation
+<a src="#understanding-the-reduce-operation"></a>
 
 The reduce operation is a technique that combines all the elements of a vector into a single value by iteratively applying a function that takes two arguments and chaining the output of one iteration into the input of the next
 
 Sound familiar? This is almost exactly what we just performed manually when building `livestock.data`! So let's see how we can apply reduce to elegantly join all of our datasets
 
 ## Leveraging purrr::reduce to join multiple datasets
+<a src="#leveraging-purrr-reduce"></a>
 
 purrr is a package that enhances R's functional programming toolkit for working with functions and vectors (i.e. purrr::reduce)
 
@@ -95,20 +107,21 @@ livestock.data <- purrr::reduce(
 
 Let's break down the arguments that we just passed
 
-First, we started with a list of our datasets
+First, we started with a list of our datasets:
 
 ```R
 list(bovine, goats, swine, sheep)
 ```
 
-And followed with an inline anonymous function that iteratively joins the output from each step into the input of the next (for more information on purrr's inline anonymous functions, see [here](https://adv-r.hadley.nz/functionals.html#purrr-shortcuts))
+And followed with an inline anonymous function that iteratively joins the output from each step into the input of the next (for more information on purrr's inline anonymous functions, see [here](https://adv-r.hadley.nz/functionals.html#purrr-shortcuts)):
 
 
 ```R
 ~ dplyr::full_join(.x, .y, by=c("country", "year"))
 ```
 
-
 ## Conclusion
+<a src="#conclusion"></a>
 
 ## Additional resources
+<a src="#additional-resources"></a>
