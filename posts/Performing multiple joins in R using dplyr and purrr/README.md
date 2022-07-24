@@ -68,14 +68,27 @@ livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
-In the above code we used the output of each join statement as input for the next - incrementally building our dataset
+In the above code we chain the output of each join statement as input for the next - incrementally building our dataset
 
 ## Understanding the reduce operation
 
-The reduce operation is an operation that combines the elements of a vector into a single value
+The reduce operation is a technique that combines all the elements of a vector into a single value by iteratively applying a function that takes two arguments and chaining the output of one iteration into the input of the next
 
+Sound familiar? This is almost exactly what we just performed manually when building `livestock.data`! So let's see how we can apply reduce to elegantly join all of our datasets
 
 ## Leveraging purrr::reduce to join multiple datasets
+
+purrr is a package that enhances R's functional programming toolkit for working with functions and vectors
+
+In this case, we're able to access a reduce operator via purrr::reduce and use in conjunction with dplyr::full_join to join all of our datasets in effectively one line of code
+
+```R
+livestock.data <- purrr::reduce(
+    list(bovine, goats, swine, sheep),
+    ~ dplyr::full_join(.x, .y, by=c("country", "year"))
+)
+```
+
 
 ## Conclusion
 
