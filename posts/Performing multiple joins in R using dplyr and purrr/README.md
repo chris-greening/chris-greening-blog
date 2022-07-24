@@ -8,9 +8,7 @@ So let's explore how we can leverage R and the tidyverse to join an arbitrary nu
 
 ## Installing prerequisite libraries
 
-In this tutorial we'll be using
-- dplyr:
-- purrr
+In this tutorial we'll be using dplyr and purrr from the tidyverse
 
 ```R
 install.packages(c("dplyr", "purrr"))
@@ -18,7 +16,7 @@ install.packages(c("dplyr", "purrr"))
 
 ## Examining our sample datasets
 
-For the following examples, we'll be using real-world agricultural data sourced via Eurostat containing the number of specific livestock animals in a `country` during a given `year` (in this case `swine`, `bovine`, `sheep`, and `goats`)
+For the following examples, we'll be using real-world agricultural data sourced via Eurostat containing the number of specific livestock animals (`swine`, `bovine`, `sheep`, and `goats`) in a `country` during a given `year`
 
 For example, here is the `goats` dataset
 ```R
@@ -39,7 +37,7 @@ For example, here is the `goats` dataset
 # … with 1,312 more rows
 ```
 
-Our task is to join these datasets by `country` and `year` into a single `livestock.data` variable containing all the animals
+Our goal is to join these datasets by `country` and `year` into a single `livestock.data` variable containing all the animals
 
 ```R
 > livestock.data
