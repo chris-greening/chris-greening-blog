@@ -6,9 +6,9 @@ So let's explore how we can leverage R and the tidyverse to join an arbitrary nu
 
 ## Table of Contents 
 
-## Installing prerequisite libraries
+## Installing prerequisite packages
 
-In this tutorial we'll be using dplyr and purrr for joining and reducing
+In this tutorial we'll be using dplyr and purrr from the popular tidyverse collection of packages
 
 ```R
 install.packages(c("dplyr", "purrr"))
@@ -59,9 +59,7 @@ Our goal is to join these datasets by `country` and `year` into a single `livest
 
 ## Using dplyr::full_join to manually join two datasets at a time
 
-Let's start with a manual, naive approach by joining our datasets together one-by-one
-
-This approach uses the output of each join statement as input for the next - incrementally building our dataset
+Let's start with a manual, naive approach and manually join our datasets one-by-one
 
 ```R
 by = c("country", "year")
@@ -70,10 +68,11 @@ livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
+In the above code we used the output of each join statement as input for the next - incrementally building our dataset
+
 ## Understanding the reduce operation
 
-If you understood the previous approach, then we're already well on our way to understanding how to use the reduce operation!
-
+The reduce operation is an operation that combines the elements of a vector into a single value
 
 
 ## Leveraging purrr::reduce to join multiple datasets
