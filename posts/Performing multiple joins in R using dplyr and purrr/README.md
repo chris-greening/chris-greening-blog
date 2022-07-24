@@ -6,9 +6,15 @@ So let's explore how we can leverage R and the tidyverse to join an arbitrary nu
 
 ## Table of Contents 
 
-## Installing and importing libraries
+## Installing prerequisite libraries
 
-This example will be using
+In this tutorial we'll be using
+- dplyr:
+- purrr
+
+```R
+install.packages(c("dplyr", "purrr"))
+```
 
 ## Examining our sample datasets
 
@@ -57,7 +63,7 @@ Our task is to join these datasets by `country` and `year` into a single `livest
 
 Let's start with a manual, naive approach of joining our datasets one-by-one
 
-This approach chains the output of each join statement as input for each subsequent join, incrementally building our dataset
+This approach chains the output of each join statement as input for the next, incrementally building our dataset
 
 ```R
 by = c("country", "year")
@@ -65,9 +71,6 @@ livestock.data <- dplyr::full_join(bovine, goats, by=by)
 livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
-
-
-
 
 ## Understanding the reduce operation
 
