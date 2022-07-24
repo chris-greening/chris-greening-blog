@@ -80,7 +80,7 @@ Sound familiar? This is almost exactly what we just performed manually when buil
 
 purrr is a package that enhances R's functional programming toolkit for working with functions and vectors
 
-In this case, we're able to access a reduce operator via purrr::reduce and use in conjunction with dplyr::full_join to join all of our datasets in effectively one line of code
+In this case, we're going to use purrr::reduce in conjunction with dplyr::full_join to join all of our datasets in one line of concise, readable code
 
 ```R
 livestock.data <- purrr::reduce(
@@ -88,7 +88,6 @@ livestock.data <- purrr::reduce(
     ~ dplyr::full_join(.x, .y, by=c("country", "year"))
 )
 ```
-
 
 ## Conclusion
 
