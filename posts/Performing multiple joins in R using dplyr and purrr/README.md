@@ -6,9 +6,52 @@ So let's explore how we can leverage R and the tidyverse to join an arbitrary nu
 
 ## Table of Contents 
 
-## Joining two datasets
+## Examining our sample livestock datasets
 
-Let'
+For the following examples, I'm using real-world agricultural data sourced via Eurostat containing the number of specific livestock animals in a `country` during a given `year` (in this case `swine`, `bovine`, `sheep`, and `goats`)
+
+For example, here is the `goats` dataset
+```R
+> goats
+# A tibble: 1,322 × 3
+   country  year goats
+   <chr>   <dbl> <dbl>
+ 1 Albania  2014 904
+ 2 Albania  2015 932
+ 3 Albania  2016 941.
+ 4 Albania  2017 933.
+ 5 Albania  2018 917.
+ 6 Albania  2019 863.
+ 7 Albania  2020 774.
+ 8 Austria  1993  47
+ 9 Austria  1994  49.8
+10 Austria  1995  54.2
+# … with 1,312 more rows
+```
+
+Our task is to join these datasets by `country` and `year` into a single `livestock.data` table containing all the animals
+
+```R
+> livestock.data
+# A tibble: 1,322 × 6
+   country  year bovine goats swine sheep
+   <chr>   <dbl>  <dbl> <dbl> <dbl> <dbl>
+ 1 Albania  2014   500. 904    172. 1896
+ 2 Albania  2015   506. 932    177. 1918
+ 3 Albania  2016   497. 941.   184. 1972.
+ 4 Albania  2017   475. 933.   180. 1926.
+ 5 Albania  2018   467. 917.   184. 1864.
+ 6 Albania  2019   416. 863.   184. 1758.
+ 7 Albania  2020   363. 774.   158. 1558.
+ 8 Austria  1993  2334.  47     NA   334
+ 9 Austria  1994  2329.  49.8 3729.  342.
+10 Austria  1995  2326.  54.2 3706.  365.
+# … with 1,312 more rows
+```
+
+## Joining two datasets at a time
+
+Let's start by joining just two datasets using dplyr::full_join
 
 ## Understanding the reduce operation
 
