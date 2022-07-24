@@ -55,9 +55,9 @@ Our task is to join these datasets by `country` and `year` into a single `livest
 
 ## Using dplyr::full_join to join two datasets at a time
 
-Let's start with a couple naive approaches of joining our datasets two at a time to help us appreciate and understand why we use purrr::reduce
+Let's start with a manual, naive approach of joining our datasets one by one
 
-This first approach creates `livestock.data` and then subsequently feeds `livestock.data` into the following joins to incorporate the rema
+This approach chains the output of each join statement as input for each subsequent join, incrementally building our dataset
 
 ```R
 by = c("country", "year")
@@ -65,6 +65,9 @@ livestock.data <- dplyr::full_join(bovine, goats, by=by)
 livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
+
+
+
 
 ## Understanding the reduce operation
 
