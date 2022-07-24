@@ -8,7 +8,7 @@ So let's explore how we can leverage R and the tidyverse to join an arbitrary nu
 
 ## Installing prerequisite libraries
 
-In this tutorial we'll be using dplyr and purrr from the tidyverse
+In this tutorial we'll be using dplyr and purrr
 
 ```R
 install.packages(c("dplyr", "purrr"))
@@ -59,7 +59,7 @@ Our goal is to join these datasets by `country` and `year` into a single `livest
 
 ## Using dplyr::full_join to join two datasets at a time
 
-Let's start with a manual, naive approach of joining our datasets one-by-one
+Let's start with a manual, naive approach by joining our datasets together one-by-one
 
 This approach chains the output of each join statement as input for the next, incrementally building our dataset
 
