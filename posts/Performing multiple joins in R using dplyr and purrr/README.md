@@ -91,7 +91,10 @@ I struggled to understand how reducing worked for a long time - it's a weird con
 
 The reduce operation is a technique that combines all the elements of a vector (i.e. an array containing our individual livestock datasets) into a single value (i.e. the final joined table).   
 
-The reduce operation accomplishes this by iteratively applying a function that takes two arguments and chaining the output of one iteration into the input of the next
+The reduce operation accomplishes this by:
+1. looping over a vector
+2. applying a function that takes two arguments (such as `dplyr::full_join) 
+3. and chaining the output of one iteration into the input of the next
 
 Sound familiar? This is almost exactly what we just performed manually when building `livestock.data` except this time we'll be leveraging R to do it for us! So let's see how we can apply reduce to elegantly join all of our datasets
 
