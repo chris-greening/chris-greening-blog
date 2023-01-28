@@ -12,10 +12,10 @@ setwd("/set/your/working/directory/here")
 
 #### Read lookup tables and deframe into named vectors ----
 eu.agricultural.codes <- readr::read_csv("data/euro_agricultural_codes.csv") %>%
-  select(Code, Description) %>%
+  dplyr::select(Code, Description) %>%
   tibble::deframe()
 eu.country.codes <- readr::read_csv("data/euro_country_codes.csv") %>%
-  select(geo, country) %>%
+  dplyr::select(geo, country) %>%
   tibble::deframe()
 
 #### Load data, use lookup tables to convert codes to useful names, pivot data wide, and outer join 
