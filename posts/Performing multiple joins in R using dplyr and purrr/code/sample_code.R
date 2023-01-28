@@ -8,7 +8,7 @@ library(dplyr)
 library(tibble)
 library(tidyr)
 
-setwd("C:/Users/chris/OneDrive - christophergreening.com/Documents/Programming/chris-greening-blog/posts/Performing multiple joins in R using dplyr and purrr/code")
+setwd("/set/your/working/directory/here")
 
 #### Read lookup tables and deframe into named vectors ----
 eu.agricultural.codes <- readr::read_csv("data/euro_agricultural_codes.csv") %>%
