@@ -106,7 +106,7 @@ So let's see in practice how we can apply the reduce operation to elegantly join
 ## Leveraging purrr::reduce to join multiple datasets
 <a src="#leveraging-purrr-reduce"></a>
 
-`purrr` is a package that enhances R's functional programming toolkit for working with functions and vectors (i.e. `purrr::reduce`)
+`purrr` is a package that enhances R's functional programming toolkit for working with functions and vectors (i.e. reducing, mapping, filtering, etc.)
 
 In this case, we're going to use `purrr::reduce` in conjunction with `dplyr::full_join` to join all of our datasets in one line of concise, readable code
 
@@ -118,6 +118,8 @@ livestock.data <- purrr::reduce(
     }
 )
 ```
+
+And that's it! We've joined all of our datasets in what's essentially a single line of code
 
 Let's break down the arguments that we just passed to `reduce` 
 
