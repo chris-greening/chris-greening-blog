@@ -80,9 +80,14 @@ livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
-In the above code we feed the output (`livestock.data`) of each join statement as input for the next - incrementally building our dataset one animal at a time
+The above code accomplishes the exercise by:
+1. Manually stepping through each animal
+2. applying a function that takes two arguments (in this case `dplyr::full_join`)
+3. and chaining the output of one step (`livestock.data`) as the input for the next step
 
-While this might work for four datasets, what if we had 100 datasets? Suddenly not a great solution - let's investigate how we can improve and scale this
+While this might work for four datasets, what if we had 100 datasets? 1000 datasets? _n datasets?!_ Suddenly not a great solution! 
+
+Let's investigate how we can improve, automate, and scale this
 
 ## Understanding the reduce operation
 <a src="#understanding-the-reduce-operation"></a>
@@ -93,8 +98,8 @@ The reduce operation is a technique that combines all the elements of a vector (
 
 The reduce operation accomplishes this by:
 1. looping over a vector
-2. applying a function that takes two arguments (such as `dplyr::full_join) 
-3. and chaining the output of one iteration into the input of the next
+2. applying a function that takes two arguments (such as `dplyr::full_join`) 
+3. and chaining the output of one step as the input for the next step
 
 Sound familiar? This is almost exactly what we just performed manually when building `livestock.data` except this time we'll be leveraging R to do it for us! So let's see how we can apply reduce to elegantly join all of our datasets
 
@@ -122,11 +127,12 @@ First, we started with a list of our datasets:
 list(bovine, goats, swine, sheep)
 ```
 
-And followed with an inline anonymous function that iteratively joins the output from each step into the input of the next (for more information on purrr's inline anonymous functions, see [here](https://adv-r.hadley.nz/functionals.html#purrr-shortcuts)):
-
+And followed with a function that joins the output from each step into the input of the next 
 
 ```R
-~ dplyr::full_join(.x, .y, by=c("country", "year"))
+function(left, right) {
+  dplyr::full_join(left, right, by=c("country", "year"))
+}
 ```
 
 ## Conclusion
