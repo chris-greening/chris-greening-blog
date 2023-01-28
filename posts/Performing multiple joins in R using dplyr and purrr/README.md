@@ -101,7 +101,9 @@ The reduce operation accomplishes this by:
 2. applying a function that takes two arguments (such as `dplyr::full_join`) 
 3. and chaining the output of one step as the input for the next step
 
-Sound familiar? This is almost exactly what we just performed manually when building `livestock.data` except this time we'll be leveraging R to do it for us! So let's see how we can apply reduce to elegantly join all of our datasets
+Sound familiar? This is almost exactly what we just performed manually when building `livestock.data` except this time we'll be leveraging R to do it for us! 
+
+So let's see in practice how we can apply reduce to elegantly join our `livestock.data`
 
 ## Leveraging purrr::reduce to join multiple datasets
 <a src="#leveraging-purrr-reduce"></a>
