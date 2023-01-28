@@ -80,7 +80,7 @@ livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
-In the above code we feed the output (`livestock.data`) of each join statement as input for the next - incrementally building our dataset
+In the above code we feed the output (`livestock.data`) of each join statement as input for the next - incrementally building our dataset one animal at a time
 
 While this might work for four datasets, what if we had 100 datasets? Suddenly not a great solution - let's investigate how we can improve and scale this
 
