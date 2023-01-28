@@ -120,7 +120,7 @@ So let's see in practice how we can apply the reduce operation to elegantly join
 
 `purrr` is a package that enhances R's **functional programming toolkit** for working with functions and vectors (i.e. reducing, mapping, filtering, etc.)
 
-In this case, we're going to use `purrr::reduce` in conjunction with `dplyr::full_join` to join all of our datasets in one line of **concise, readable code**
+In this case, we're going to use [`purrr::reduce`](https://purrr.tidyverse.org/reference/reduce.html) in conjunction with [`dplyr::full_join`](https://dplyr.tidyverse.org/reference/mutate-joins.html) to join all of our datasets in one line of **concise, readable code**
 
 ```R
 livestock.data <- purrr::reduce(
@@ -154,7 +154,9 @@ function(left, right) {
 ## Conclusion
 <a src="#conclusion"></a>
 
-And just like that we're able to join an arbitrary amount of datasets together on a single column using `dplyr` and `purrr`!
+And just like that we're able to join an arbitrary amount of datasets together on a single column using `dplyr` and `purrr`! 
+
+If you want to take this a step further and practice with sample code and data, I've pulled together a full working example for you to explore on [GitHub](https://github.com/chris-greening/chris-greening-blog/blob/main/posts/Performing%20multiple%20joins%20in%20R%20using%20dplyr%20and%20purrr/code/sample_code.R)!
 
 **Thanks so much for reading** and if you liked my content, be sure to check out some of my other work or **connect** with me on social media or my [**personal website**](https://www.christophergreening.com/) :smile: 
 
