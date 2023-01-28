@@ -90,9 +90,7 @@ While this might work for four datasets, what if we had 100 datasets? 1000 datas
 Let's investigate how we can improve, automate, and scale this
 
 ## Understanding the reduce operation
-<a src="#understanding-the-reduce-operation"></a>
-
-I struggled to understand how reducing worked for a long time - it's a weird concept to grasp so take your time! 
+<a src="#understanding-the-reduce-operation"></a> 
 
 The reduce operation is a technique that combines all the elements of a vector (i.e. an array containing our individual livestock datasets) into a single value (i.e. the final joined table).   
 
