@@ -2,7 +2,7 @@
 
 Joining multiple datasets on the same column is a common pattern in data preparation
 
-So let's explore how we can leverage R and the tidyverse to join an arbitrary number of datasets on a shared column with elegant, readable code!
+So let's jump in and explore how we can leverage R and the tidyverse to join an arbitrary number of datasets on a shared column with elegant, readable code!
 
 ## Table of Contents 
 - [Installing prerequisite packages](#installing-prerequisite-packages)
