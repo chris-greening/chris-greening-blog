@@ -15,6 +15,8 @@ So let's jump in and explore how we can leverage R and the tidyverse to join an 
 
 {% embed https://www.christophergreening.com %}
 
+---
+
 ## Installing prerequisite packages
 <a src="#installing-prerequisite-packages"></a>
 
@@ -25,6 +27,8 @@ The following line of code will install them on your machine if they aren't alre
 ```R
 install.packages(c("dplyr", "purrr"))
 ```
+
+---
 
 ## Examining our sample datasets
 <a src="#examining-our-sample-datasets"></a>
@@ -70,6 +74,8 @@ Our goal is to join these datasets by `country` and `year` into a single `livest
 # … with 1,312 more rows
 ```
 
+---
+
 ## Using dplyr::full_join to manually join two datasets at a time
 <a src="#using-dplyr"></a>
 
@@ -91,6 +97,8 @@ While this might work for four datasets, what if we had 100 datasets? 1000 datas
 
 Let's investigate how we can improve, automate, and scale this
 
+---
+
 ## Understanding the reduce operation
 <a src="#understanding-the-reduce-operation"></a> 
 
@@ -104,6 +112,8 @@ The reduce operation accomplishes this by:
 Sound familiar? This is exactly what we just performed manually in the previous section except this time we'll be leveraging R to do it for us! 
 
 So let's see in practice how we can apply the reduce operation to elegantly join our `livestock.data`
+
+---
 
 ## Leveraging purrr::reduce to join multiple datasets
 <a src="#leveraging-purrr-reduce"></a>
@@ -141,12 +151,14 @@ function(left, right) {
 
 ![Image showing the different datasets joining together in a hierarchical chain that starts with bovine and goats joining into livestock.data, livestock.data joining with swine, and livestock.data finally joining with sheep](media/join_image.PNG)
 
+---
+
 ## Conclusion
 <a src="#conclusion"></a>
 
 And just like that we're able to join an arbitrary amount of datasets together on a single column using `dplyr` and `purrr`!
 
-
+---
 
 ## Additional resources
 <a src="#additional-resources"></a>
