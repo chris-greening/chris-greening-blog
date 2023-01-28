@@ -121,21 +121,25 @@ livestock.data <- purrr::reduce(
 
 And that's it! We've joined all of our datasets in what's essentially a single line of code
 
-Let's break down the arguments that we just passed to `purrr::reduce` 
+We accomplished this by:
 
-First, we started with a list of our datasets:
-
+1. Looping over a list of our livestock
 ```R
 list(bovine, goats, swine, sheep)
 ```
-
-And followed with a function that outer joins two datasets together 
+2. applying `dplyr::full_join` which takes two arguments 
 
 ```R
 function(left, right) {
   dplyr::full_join(left, right, by=c("country", "year"))
 }
 ```
+
+3. and chaining the output of one step as the input for the next step
+
+![Image showing the different datasets joining together in a hierarchical chain that starts with bovine and goats joining into livestock.data, livestock.data joining with swine, and livestock.data finally joining with sheep](media/join_image.PNG)
+
+
 
 ## Conclusion
 <a src="#conclusion"></a>
