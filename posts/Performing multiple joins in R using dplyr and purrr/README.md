@@ -119,7 +119,7 @@ livestock.data <- purrr::reduce(
 )
 ```
 
-Let's break down the arguments that we just passed
+Let's break down the arguments that we just passed to `reduce` 
 
 First, we started with a list of our datasets:
 
