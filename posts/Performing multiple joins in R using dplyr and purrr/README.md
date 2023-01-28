@@ -13,6 +13,8 @@ So let's jump in and explore how we can leverage R and the tidyverse to join an 
 - [Conclusion](#conclusion)
 - [Additional resources](#additional-resources)
 
+{% embed https://www.christophergreening.com %}
+
 ## Installing prerequisite packages
 <a src="#installing-prerequisite-packages"></a>
 
@@ -139,10 +141,12 @@ function(left, right) {
 
 ![Image showing the different datasets joining together in a hierarchical chain that starts with bovine and goats joining into livestock.data, livestock.data joining with swine, and livestock.data finally joining with sheep](media/join_image.PNG)
 
-
-
 ## Conclusion
 <a src="#conclusion"></a>
+
+And just like that we're able to join an arbitrary amount of datasets together on a single column using `dplyr` and `purrr`!
+
+
 
 ## Additional resources
 <a src="#additional-resources"></a>
