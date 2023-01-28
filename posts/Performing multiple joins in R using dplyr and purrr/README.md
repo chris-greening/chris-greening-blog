@@ -154,9 +154,9 @@ function(left, right) {
 ## Conclusion
 <a src="#conclusion"></a>
 
-Thus the elegance of the reduce operation comes from its flexibility to handle _n_ datasets (assuming your machine has enough memory :stuck_out_tongue_winking_eye:)
+Thus the elegance of the reduce operation comes from its **flexibility** to handle _n_ datasets (assuming your machine has enough memory :stuck_out_tongue_winking_eye:)
 
-If you want to take this a step further and practice with sample code and data, I've pulled together a full working example for you to explore on [GitHub](https://github.com/chris-greening/chris-greening-blog/blob/main/posts/Performing%20multiple%20joins%20in%20R%20using%20dplyr%20and%20purrr/code/sample_code.R)!
+If you want to take this a step further and **practice** with sample code and data, I've pulled together a **full working example** for you to explore on [GitHub](https://github.com/chris-greening/chris-greening-blog/blob/main/posts/Performing%20multiple%20joins%20in%20R%20using%20dplyr%20and%20purrr/code/sample_code.R)!
 
 **Thanks so much for reading** and if you liked my content, be sure to check out some of my other work or **connect** with me on social media or my [**personal website**](https://www.christophergreening.com/) :smile: 
 
