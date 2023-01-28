@@ -89,7 +89,7 @@ livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
 The above code accomplishes the exercise by:
-1. **Manually** stepping through each animal
+1. **Manually** stepping through each animal variable
 2. **applying a function** that takes two arguments (in this case `dplyr::full_join`)
 3. and chaining the **output** of one step (`livestock.data`) as the **input** for the next step
 
@@ -154,7 +154,7 @@ function(left, right) {
 ## Conclusion
 <a src="#conclusion"></a>
 
-And just like that we're able to join an arbitrary amount of datasets together on a single column using `dplyr` and `purrr`! 
+Thus the elegance of the reduce operation comes from its flexibility to handle _n_ datasets (assuming your machine has enough memory :stuck_out_tongue_winking_eye:)
 
 If you want to take this a step further and practice with sample code and data, I've pulled together a full working example for you to explore on [GitHub](https://github.com/chris-greening/chris-greening-blog/blob/main/posts/Performing%20multiple%20joins%20in%20R%20using%20dplyr%20and%20purrr/code/sample_code.R)!
 
@@ -171,3 +171,9 @@ Cheers!
 
 ## Additional resources
 <a src="#additional-resources"></a>
+
+- [purrr cheat sheet](https://github.com/rstudio/cheatsheets/blob/main/purrr.pdf)
+- [dplyr cheat sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+- [Reduction operator (Wikipedia)](https://en.wikipedia.org/wiki/Reduction_operator)
+- [Advanced R by Hadley Wickham](https://adv-r.hadley.nz/functionals.html#reduce)
+- [Tidyverse](https://www.tidyverse.org/)
