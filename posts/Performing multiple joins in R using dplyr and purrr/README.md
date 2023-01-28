@@ -103,7 +103,7 @@ Sound familiar? This is almost exactly what we just performed manually when buil
 
 purrr is a package that enhances R's functional programming toolkit for working with functions and vectors (i.e. `purrr::reduce`)
 
-In this case, we're going to use purrr::reduce in conjunction with `dplyr::full_join` to join all of our datasets in one line of concise, readable code
+In this case, we're going to use `purrr::reduce` in conjunction with `dplyr::full_join` to join all of our datasets in one line of concise, readable code
 
 ```R
 livestock.data <- purrr::reduce(
