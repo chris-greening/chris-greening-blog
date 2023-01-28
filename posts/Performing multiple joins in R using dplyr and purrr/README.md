@@ -91,7 +91,7 @@ The reduce operation is a technique that combines all the elements of a vector (
 
 The reduce operation accomplishes this by iteratively applying a function that takes two arguments and chaining the output of one iteration into the input of the next
 
-Sound familiar? This is almost exactly what we just performed manually when building `livestock.data`! So let's see how we can apply reduce to elegantly join all of our datasets
+Sound familiar? This is almost exactly what we just performed manually when building `livestock.data` except this time we'll be leveraging R to do it for us! So let's see how we can apply reduce to elegantly join all of our datasets
 
 ## Leveraging purrr::reduce to join multiple datasets
 <a src="#leveraging-purrr-reduce"></a>
