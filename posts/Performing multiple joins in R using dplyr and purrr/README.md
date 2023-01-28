@@ -158,6 +158,15 @@ function(left, right) {
 
 And just like that we're able to join an arbitrary amount of datasets together on a single column using `dplyr` and `purrr`!
 
+**Thanks so much for reading** and if you liked my content, be sure to check out some of my other work or **connect** with me on social media or my [**personal website**](https://www.christophergreening.com/) :smile: 
+
+{% embed https://www.christophergreening.com %}
+
+Cheers!
+
+{% embed https://dev.to/chrisgreening/i-built-an-interactive-3d-photo-display-with-javascript-303j %}
+{% embed https://twitter.com/ChrisGreening/status/1472670724406005768 %} 
+
 ---
 
 ## Additional resources
