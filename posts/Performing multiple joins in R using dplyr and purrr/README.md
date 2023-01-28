@@ -108,7 +108,9 @@ In this case, we're going to use `purrr::reduce` in conjunction with `dplyr::ful
 ```R
 livestock.data <- purrr::reduce(
     list(bovine, goats, swine, sheep),
-    ~ dplyr::full_join(.x, .y, by=c("country", "year"))
+    function(left, right) {
+      dplyr::full_join(left, right, by=c("country", "year"))
+    }
 )
 ```
 
