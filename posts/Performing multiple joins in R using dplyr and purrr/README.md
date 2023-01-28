@@ -95,18 +95,18 @@ Let's investigate how we can improve, automate, and scale this
 The reduce operation is a technique that combines all the elements of an array (i.e. an array containing our individual livestock datasets) into a single value (i.e. the final joined table).   
 
 The reduce operation accomplishes this by:
-1. looping over an array
+1. Looping over an array
 2. applying a function that takes two arguments (such as `dplyr::full_join`) 
 3. and chaining the output of one step as the input for the next step
 
 Sound familiar? This is exactly what we just performed manually in the previous section except this time we'll be leveraging R to do it for us! 
 
-So let's see in practice how we can apply reduce to elegantly join our `livestock.data`
+So let's see in practice how we can apply the reduce operation to elegantly join our `livestock.data`
 
 ## Leveraging purrr::reduce to join multiple datasets
 <a src="#leveraging-purrr-reduce"></a>
 
-purrr is a package that enhances R's functional programming toolkit for working with functions and vectors (i.e. `purrr::reduce`)
+`purrr` is a package that enhances R's functional programming toolkit for working with functions and vectors (i.e. `purrr::reduce`)
 
 In this case, we're going to use `purrr::reduce` in conjunction with `dplyr::full_join` to join all of our datasets in one line of concise, readable code
 
