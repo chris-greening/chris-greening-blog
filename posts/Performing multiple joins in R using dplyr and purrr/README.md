@@ -48,7 +48,7 @@ For example, here is the `goats` dataset
 # … with 1,312 more rows
 ```
 
-Our goal is to join these datasets by `country` and `year` into a single `livestock.data` variable containing all the animals
+Our goal is to join these datasets by `country` and `year` into a single `livestock.data` variable containing all the animals like so:
 
 ```R
 > livestock.data
@@ -80,7 +80,7 @@ livestock.data <- dplyr::full_join(livestock.data, swine, by=by)
 livestock.data <- dplyr::full_join(livestock.data, sheep, by=by)
 ```
 
-In the above code we chain the output (`livestock.data`) of each join statement as input for the next - incrementally building our dataset
+In the above code we feed the output (`livestock.data`) of each join statement as input for the next - incrementally building our dataset
 
 While this might work for four datasets, what if we had 100 datasets? Suddenly not a great solution - let's investigate how we can improve and scale this
 
