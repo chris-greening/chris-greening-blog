@@ -71,7 +71,7 @@ Our goal is to join these datasets by `country` and `year` into a single `livest
 ## Using dplyr::full_join to manually join two datasets at a time
 <a src="#using-dplyr"></a>
 
-Let's start with a naive approach and manually join our datasets one-by-one
+Let's start with a naive approach and manually join our datasets one-by-one on the `country` and `year` columns
 
 ```R
 by = c("country", "year")
