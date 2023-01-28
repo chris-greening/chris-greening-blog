@@ -87,6 +87,8 @@ While this might work for four datasets, what if we had 100 datasets? Suddenly n
 ## Understanding the reduce operation
 <a src="#understanding-the-reduce-operation"></a>
 
+I struggled to understand how reducing worked for a long time - it's a weird concept to grasp so take your time! 
+
 The reduce operation is a technique that combines all the elements of a vector (i.e. an array containing our individual livestock datasets) into a single value (i.e. the final joined table).   
 
 The reduce operation accomplishes this by iteratively applying a function that takes two arguments and chaining the output of one iteration into the input of the next
