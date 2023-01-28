@@ -121,7 +121,7 @@ livestock.data <- purrr::reduce(
 
 And that's it! We've joined all of our datasets in what's essentially a single line of code
 
-Let's break down the arguments that we just passed to `reduce` 
+Let's break down the arguments that we just passed to `purrr::reduce` 
 
 First, we started with a list of our datasets:
 
@@ -129,7 +129,7 @@ First, we started with a list of our datasets:
 list(bovine, goats, swine, sheep)
 ```
 
-And followed with a function that joins the output from each step into the input of the next 
+And followed with a function that outer joins two datasets together 
 
 ```R
 function(left, right) {
