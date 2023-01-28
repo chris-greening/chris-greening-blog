@@ -164,8 +164,8 @@ And just like that we're able to join an arbitrary amount of datasets together o
 
 Cheers!
 
-{% embed https://dev.to/chrisgreening/i-built-an-interactive-3d-photo-display-with-javascript-303j %}
-{% embed https://twitter.com/ChrisGreening/status/1472670724406005768 %} 
+{% embed https://dev.to/chrisgreening/deploying-a-free-tier-relational-database-with-amazon-rds-3jd2 %}
+{% embed https://dev.to/chrisgreening/connecting-to-a-relational-database-using-sqlalchemy-and-python-1619 %} 
 
 ---
 
