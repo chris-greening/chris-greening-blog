@@ -107,7 +107,7 @@ The **reduce** operation is a technique that **combines** all the elements of an
 The reduce operation accomplishes this by:
 1. **Looping** over an array
 2. **applying a function** that takes two arguments (such as `dplyr::full_join`) 
-3. and chaining the **outpu**t of one step as the **input** for the next step
+3. and chaining the **output** of one step as the **input** for the next step
 
 Sound familiar? This is *exactly* what we just performed manually in the previous section except this time we'll be **leveraging R** to do it for us! 
 
