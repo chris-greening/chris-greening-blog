@@ -92,10 +92,10 @@ Let's investigate how we can improve, automate, and scale this
 ## Understanding the reduce operation
 <a src="#understanding-the-reduce-operation"></a> 
 
-The reduce operation is a technique that combines all the elements of a vector (i.e. an array containing our individual livestock datasets) into a single value (i.e. the final joined table).   
+The reduce operation is a technique that combines all the elements of an array (i.e. an array containing our individual livestock datasets) into a single value (i.e. the final joined table).   
 
 The reduce operation accomplishes this by:
-1. looping over a vector
+1. looping over an array
 2. applying a function that takes two arguments (such as `dplyr::full_join`) 
 3. and chaining the output of one step as the input for the next step
 
