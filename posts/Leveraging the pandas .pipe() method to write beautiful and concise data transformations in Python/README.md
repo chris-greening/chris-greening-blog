@@ -6,8 +6,7 @@ So let's learn how we can leverage the pandas `pipe` method in Python to abstrac
 
 ## Table of Contents 
 - [Overview of the .pipe() method](#overview-of-the-pipe-method)
-- [Piping data with a code demonstration](#piping-data-with-a-code-demonstration)
-- []()
+- [A concrete example of the pipe method](#a-more-concrete-example-of-the-pipe-method")
 - [Conclusion](#conclusion)
 - [Additional resources](#additional-resources)
 
@@ -47,7 +46,8 @@ No worries! Yeah - let's take a look at a more concrete example in the next sect
 
 ---
 
-## Using the pipe method in practice
+## A concrete example of the pipe method
+<a src="#a-more-concrete-example-of-the-pipe-method"></a>
 
 Let's pretend we have a `DataFrame`, let's call it `town_df`, that contains weekly time-series data for every single town in the United States
 
@@ -84,7 +84,7 @@ transformed_df = (
 
 And that's it! 
 
-A clear and concise chain of piped operations whose intention's are immediately obvious to re
+A clear and concise chain of piped operations whose intention's are immediately obvious
 
 ##  <a src="#conclusion"></a>
 
