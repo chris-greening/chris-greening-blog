@@ -11,16 +11,16 @@ def main() -> None:
         .pipe(_select_relevant_columns)
         .pipe(_explode_tags_column_into_rows)
         .pipe(_aggregate_sum_by_tag)
-        .pipe(_filter_top_five_tags_by_view)
+        .pipe(_filter_top_tags_by_view, number_of_tags=5)
     )
     print(top_five_tags_df)
 
-def _filter_top_five_tags_by_view(df: "pd.DataFrame") -> "pd.DataFrame":
+def _filter_top_tags_by_view(df: "pd.DataFrame", number_of_tags: int) -> "pd.DataFrame":
     """Return DataFrame with only the top 5 rows filters"""
     return (
         df
         .sort_values("views", ascending=False)
-        .head(5)
+        .head(number_of_tags)
     )
 
 def _select_relevant_columns(df: "pd.DataFrame") -> "pd.DataFrame":
