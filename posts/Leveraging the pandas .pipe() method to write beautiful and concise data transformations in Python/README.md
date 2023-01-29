@@ -1,6 +1,6 @@
 # Leveraging the pandas .pipe() method to write beautiful and concise data transformations in Python
 
-When it comes to **data science** and **analysis**, being able to **prepare and transform** our data is a **critical** component of any successful project
+When it comes to **data science** and **analysis**, being able to **prepare and transform** our data is a **critical** component of any **successful** project
 
 So let's learn how we can leverage the `pandas` `pipe` method in Python to **abstract** complex data transformations into **easy-to-read, self documenting** operations!
 
@@ -38,7 +38,7 @@ transformed_df = (
 
 The code snippet above shows each pipe method:
 1. **Inputting** the output from the previous pipe
-2. Performing a **well-defined operation** or transformation (i.e. selecting columns)
+2. Performing a  **transformation** (i.e. selecting columns)
 3. **Chaining the output** into the input of the next pipe
 
 *Wait I still don't understand what this means!!! Can we take a look at a more concrete example?!*
