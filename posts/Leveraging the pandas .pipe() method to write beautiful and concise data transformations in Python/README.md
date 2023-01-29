@@ -7,6 +7,7 @@ So let's learn how we can leverage the `pandas` `pipe` method in Python to **abs
 ## Table of Contents 
 - [Overview of the .pipe() method](#overview-of-the-pipe-method)
 - [A concrete example of the pipe method](#a-more-concrete-example-of-the-pipe-method")
+- [The benefits of using the pipe operation](#the-benefits-of-using-the-pipe-operation)
 - [Conclusion](#conclusion)
 - [Additional resources](#additional-resources)
 
@@ -86,13 +87,14 @@ And that's it!
 
 A clear and concise chain of **immediately obvious** data transformations - let's talk about some of the benefits of writing our code like this
 
-## The maintainability benefits of using the pipe method
+## The benefits of using the pipe method
+<a src="#the-benefits-of-using-the-pipe-operation"></a>
 
-You may have noticed that I did not *explicitly* reveal to you the reader the implementation details behind any of the piped functions
+You may have noticed that I did not *explicitly* reveal any of the implementation details behind any of the piped functions
 
 And yet you *probably* didn't have a hard time understanding (at least from a top-level view) of what transformations were taking place behind the scenes!
 
-I bet you could even show this to someone that has never written a single line of code in their life and even they'd be able to get the overall gist of what's happening to the dataset
+I bet you could even show this to someone that has never written a single line of code in their life and even *they'd* be able to get the overall gist of what's happening to the dataset
 
 While some simple transformations can be accomplished in a single line of code, more complex transformations might take dozens, hundreds, or even *thousands* of lines before we can move onto the "next" transformation
 
@@ -108,12 +110,20 @@ So being able to abstract the implementation details under a well-defined unit o
 
 And when something (*inevitably*) does go wrong you're able to isolate, test, and debug your inputs and outputs because they're already logically isolated into well-defined units
 
-##  <a src="#conclusion"></a>
-
-
 ---
 
 ## Conclusion <a src="#conclusion"></a>
+
+If you want to take this a step further and **practice** with sample code and data, I've pulled together a **full working example** for you to explore on [GitHub](https://github.com/chris-greening/chris-greening-blog/blob/main/posts/Leveraging%20the%20pandas%20.pipe()%20method%20to%20write%20beautiful%20and%20concise%20data%20transformations%20in%20Python/code/pipe_method_example.py)!
+
+**Thanks so much for reading** and if you liked my content, be sure to check out some of my other work or **connect** with me on social media or my [**personal website**](https://www.christophergreening.com/) :smile: 
+
+{% embed https://www.christophergreening.com %}
+
+Cheers!
+
+{% embed https://dev.to/chrisgreening/connecting-to-a-relational-database-using-sqlalchemy-and-python-1619 %} 
+{% embed https://dev.to/chrisgreening/joining-multiple-datasets-on-the-same-column-in-r-using-dplyr-and-purrr-3pa7 %}
 
 ---
 
