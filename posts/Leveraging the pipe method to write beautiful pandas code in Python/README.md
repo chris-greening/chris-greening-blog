@@ -1,1 +1,0 @@
-Leveraging the pandas .pipe() method to write beautiful data transformations in Python
