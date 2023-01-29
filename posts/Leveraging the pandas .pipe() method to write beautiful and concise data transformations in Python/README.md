@@ -24,7 +24,7 @@ The `pipe` method allows us to chain `Series` and `DataFrame` data transformatio
 
 It accomplishes this by leveraging Python's support for higher-order functions - the ability to pass a function as an argument to another function
 
-Let's take a look at a simple example (*NOTE: assume the functions and DataFrame are pre-defined offscreen*):
+Let's take a look at a simple example (*NOTE: assume the functions and `DataFrame` are pre-defined offscreen*):
 
 ```python
 transformed_df = (
@@ -37,10 +37,10 @@ transformed_df = (
 
 The code snippet above shows each pipe method:
 1. Inputting the output from the previous pipe
-2. Performing a single operation (i.e. selecting columns or filtering segments)
+2. Performing a well-defined operation or transformation (i.e. selecting columns)
 3. Chaining the output into the input of the next pipe
 
-*Wait I still don't understand what this means?! Can we take a look at a more concrete example*
+*Wait I still don't understand what this means!!! Can we take a look at a more concrete example?!*
 
 No worries! Yeah - let's take a look at a more concrete example in the next section
 
@@ -56,7 +56,7 @@ import pandas as pd
 town_df = pd.read_csv("time_series_data_for_every_single_town_in_the_united_states.csv")
 ```
 
-And let's say we want to perform these specific transformations in this order:
+And let's say we want to perform these specific transformations in this specific order:
 1. select relevant columns
 2. filter date range
 3. approximate missing values
@@ -84,7 +84,27 @@ transformed_df = (
 
 And that's it! 
 
-A clear and concise chain of piped operations whose intention's are immediately obvious
+A clear and concise chain of immediately obvious data transformations - let's talk about some of the benefits of writing our code like this
+
+## The maintainability benefits of using the pipe method
+
+You may have noticed that I did not explicitly reveal to you the reader the implementation details of the piped functions
+
+And yet you probably didn't have a hard time understanding (at least from a top-level view) of what transformations were taking place behind the scenes!
+
+I bet you could even show this to someone that has never written a single line of code in their life and even they'd be able to get the overall gist of what's happening to the dataset
+
+While some simple transformations can be accomplished in a single line of code, more complex transformations might take dozens, hundreds, or even thousands of lines before we can move onto the "next" transformation
+
+```python
+transformed_df = (
+    df
+    .pipe(_some_oneliner_transformation)
+    .pipe(_some_million_lines_of_code_transformation_but_guess_what_you_dont_have_to_know_how_it_works_all_you_have_to_know_is_its_expected_output)
+)
+```
+
+So being able to abstract the implementation details under a well-defined unit or block of code removes the cognitive overhead of having to read *every single line* to know what's going on - you can just focus on the big picture (which is often the most important part)
 
 ##  <a src="#conclusion"></a>
 
