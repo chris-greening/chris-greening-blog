@@ -1,23 +1,44 @@
 # Author: Chris Greening
 # Date: 2023-01-29
-# Purpose: Sample code for processing European livestock data using pandas
-
-from typing import Dict
+# Purpose: Example showing how the pandas pipe method works
 
 import pandas as pd
 
 def main() -> None:
-    eu_agricultural_codes_df = _load_lookup_table("data/euro_agricultural_codes.csv", key_col="Code", val_col="Description")
-    eu_country_codes_df = _load_lookup_table("data/euro_country_codes.csv", key_col="geo", val_col="country")
+    chris_blog_posts_df = pd.read_csv("data/chris_blog_posts.csv")
+    top_five_tags_df = (
+        chris_blog_posts_df
+        .pipe(_select_relevant_columns)
+        .pipe(_explode_tags_column_into_rows)
+        .pipe(_aggregate_sum_by_tag)
+        .pipe(_filter_top_five_tags_by_view)
+    )
+    print(top_five_tags_df)
 
-def _load_lookup_table(fpath: str, key_col: str, val_col: str) -> Dict[str, str]:
-    """Return a dictionary key-val lookup table from CSV"""
+def _filter_top_five_tags_by_view(df: "pd.DataFrame") -> "pd.DataFrame":
+    """Return DataFrame with only the top 5 rows filters"""
     return (
-        pd.read_csv(fpath)
-        .set_index(key_col)
-        [[val_col]]
-        .to_dict()
-        [val_col]
+        df
+        .sort_values("views", ascending=False)
+        .head(5)
+    )
+
+def _select_relevant_columns(df: "pd.DataFrame") -> "pd.DataFrame":
+    """Return DataFrame with only relevant columns selected"""
+    return df[["likes", "comments", "views", "tags"]]
+
+def _explode_tags_column_into_rows(df: "pd.DataFrame") -> "pd.DataFrame":
+    """Return DataFrame with tags column exploded into separate rows"""
+    df["tags"] = df["tags"].str.split(",")
+    df = df.explode("tags")
+    return df
+    
+def _aggregate_sum_by_tag(df: "pd.DataFrame") -> "pd.DataFrame":
+    """Return DataFrame grouped by summed up to tag level"""
+    return (
+        df
+        .groupby("tags", as_index=False)
+        .sum()
     )
 
 if __name__ == "__main__":
