@@ -2,7 +2,7 @@
 
 When it comes to **data science** and **analysis**, being able to **prepare and transform** our data is a **critical** component of any **successful** project
 
-So let's learn how we can leverage the `pandas` `pipe` method in Python to **abstract** complex data transformations into **easy-to-read, self documenting** operations!
+So let's learn how we can leverage the [`pandas`](https://pandas.pydata.org/) `pipe` method in Python to **abstract** complex data transformations into **easy-to-read, self documenting** operations!
 
 ## Table of Contents 
 - [Overview of the .pipe() method](#overview-of-the-pipe-method)
@@ -21,7 +21,7 @@ So let's learn how we can leverage the `pandas` `pipe` method in Python to **abs
 import pandas as pd
 ```
 
-The `pipe` method allows us to **chain** `Series` and `DataFrame` data transformations together in a **semantically continuous** pipeline of **inputs** and **outputs**
+The [`pipe`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pipe.html) method allows us to **chain** [`Series`](https://pandas.pydata.org/docs/reference/api/pandas.Series.html) and [`DataFrame`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) data transformations together in a **semantically continuous** pipeline of **inputs** and **outputs**
 
 It accomplishes this by leveraging Python's support for **higher-order functions** - the ability to pass a function as an argument to another function
 
@@ -129,3 +129,7 @@ Cheers!
 
 ## Additional resources <a src="#additional-resources"></a>
 
+- [Using Pandas pipe function to improve code readability by B. Chen](https://towardsdatascience.com/using-pandas-pipe-function-to-improve-code-readability-96d66abfaf8)
+- [Higher order functions in Python](https://www.geeksforgeeks.org/higher-order-functions-in-python/)
+- [10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
+- [Pandas DataFrame pipe() Method](https://www.w3schools.com/python/pandas/ref_df_pipe.asp)
