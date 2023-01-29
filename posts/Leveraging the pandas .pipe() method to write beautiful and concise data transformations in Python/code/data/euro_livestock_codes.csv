@@ -1,0 +1,21 @@
+﻿animal_code,animal_type,animal_subtype
+A4200,goat,Live goats
+A4210K,goat,Goats mated and having already kidded
+A4210KA,goat,Goated mated for the first time
+A4210KB,goat,Goats having already kidded
+A4220,goat,Other goats
+A4100,sheep,Live sheep
+A4110K,sheep,Ewes and ewe-lambs put to the ram
+A4110KC,sheep,Milk ewes and ewe-lambs put to the ram
+A4110KD,sheep,Non milk ewes and ewe-lambs put to the ram
+A4120,sheep,Other sheep
+A3100,pig,"Live swine, domestic species"
+A3110,pig,"Piglets, live weight of under 20 kg"
+A3120_3133,pig,Breeding pigs
+A3120,pig,"Breeding sows, live weight 50 kg or over"
+A3120K,pig,Covered sows
+A2000,bovine,Live bovine animals
+A2010,bovine,"Bovine animals, less than 1 year old"
+A2010B,bovine,"Bovine animals, less that 1 year old, for slaughter"
+A2010C,bovine,"Bovine animals, less than 1 year old, not for slaughter"
+A2020,bovine,"Bovine animals, 1 to less than 2 years old"
