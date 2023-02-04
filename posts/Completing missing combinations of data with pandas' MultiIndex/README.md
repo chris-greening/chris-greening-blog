@@ -4,6 +4,8 @@ The pandas.MultiIndex is a powerful tool for handling multi-level indexing in pa
 
 Let's investigate how we can leverage MultiIndex to complete missing combinations of identifying columns or categories in our datasets!
 
+## Understanding missing combinations of categories
+
 ## What is MultiIndex?
 
 As I mentioned above, MultiIndex is a powerful tool for managing DataFrame's that contain multiple layers, categories, or segmentations
@@ -28,7 +30,6 @@ df = pd.DataFrame({
 df = df.set_index(["category_1", "category_2"])         
 ```
 
-## Understanding missing combinations of categories
 ## Creating a MultiIndex with all possible combinations of categories
 ## Reindexing the DataFrame to align with the MultiIndex
 ## Filling missing values in our completed DataFrame
