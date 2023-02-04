@@ -21,7 +21,7 @@ So let's learn how we can leverage the [`pandas`](https://pandas.pydata.org/) `p
 import pandas as pd
 ```
 
-The [`pipe`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pipe.html) method allows us to **chain** [`Series`](https://pandas.pydata.org/docs/reference/api/pandas.Series.html) and [`DataFrame`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) data transformations together in a **semantically continuous** pipeline of **inputs** and **outputs**
+The [`pipe`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pipe.html) method allows us to **chain** [`Series`](https://pandas.pydata.org/docs/reference/api/pandas.Series.html) or [`DataFrame`](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html) data transformations together in a **semantically continuous** pipeline of **inputs** and **outputs**
 
 It accomplishes this by leveraging Python's support for **higher-order functions** - the ability to pass a function as an argument to another function
 
@@ -50,7 +50,7 @@ No worries! Yeah - let's take a look at a more concrete example in the next sect
 ## A concrete example of the pipe method
 <a src="#a-more-concrete-example-of-the-pipe-method"></a>
 
-Let's pretend we have a `DataFrame`, let's call it `town_df`, that contains **weekly time-series data** for every single town in the United States
+Let's pretend we have a `DataFrame`, let's call it `town_df`, that contains **weekly time-series data** for how much electricity every single town in the United States consumes
 
 ```python
 import pandas as pd
