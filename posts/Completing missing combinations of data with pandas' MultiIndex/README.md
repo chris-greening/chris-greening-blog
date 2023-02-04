@@ -1,12 +1,32 @@
 # Completing missing combinations of data with pandas' MultiIndex
 
-Pandas MultiIndex is a powerful tool for handling multi-level indexing in pandas DataFrames allowing us to flexibly manipulate, prepare, and analyze complex datasets
+The pandas.MultiIndex is a powerful tool for handling multi-level indexing in pandas.DataFrames giving us the flexibility to manipulate, prepare, and analyze complex datasets
 
-Let's investigate how we can leverage MultiIndex to complete missing combinations of categories in our datasets 
+Let's investigate how we can leverage MultiIndex to complete missing combinations of identifying columns or categories in our datasets!
 
 ## What is MultiIndex?
 
-Pandas MultiIndex is a way of organizing and managing data in a pandas DataFrame with multiple levels of indexing. Think of it like having multiple layers of categories or labels for your data, where each layer helps you identify and categorize your data in a more specific and organized way. This makes it easier to work with large and complex data sets, as you can access and manipulate specific subsets of data based on their MultiIndex categories.
+As I mentioned above, MultiIndex is a powerful tool for managing DataFrame's that contain multiple layers, categories, or segmentations
+
+Let's take a look at a simple example:
+
+Starting with a simple DataFrame...
+
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    'category_1': ['A', 'A', 'B', 'B', 'C', 'C'],
+    'category_2': ['D', 'E', 'D', 'E', 'D', 'E']
+    'value': [1, 2, 3, 4, 5, 6]
+})
+```
+
+... we can create a MultiIndex by setting our categories as the indices
+
+```python
+df = df.set_index(["category_1", "category_2"])         
+```
 
 ## Understanding missing combinations of categories
 ## Creating a MultiIndex with all possible combinations of categories
