@@ -1,0 +1,56 @@
+﻿month,region,product,sales
+January,New York,spam,35
+March,New York,spam,66
+April,New York,spam,90
+May,New York,spam,93
+June,New York,spam,21
+August,New York,spam,82
+September,New York,spam,48
+October,New York,spam,39
+November,New York,spam,24
+January,New York,eggs,14
+March,New York,eggs,42
+April,New York,eggs,45
+June,New York,eggs,68
+July,New York,eggs,19
+August,New York,eggs,55
+October,New York,eggs,98
+November,New York,eggs,63
+December,New York,eggs,77
+January,Texas,spam,30
+March,Texas,spam,89
+April,Texas,spam,22
+June,Texas,spam,78
+July,Texas,spam,96
+August,Texas,spam,72
+November,Texas,spam,77
+December,Texas,spam,79
+January,Texas,eggs,79
+February,Texas,eggs,90
+April,Texas,eggs,32
+May,Texas,eggs,10
+June,Texas,eggs,37
+July,Texas,eggs,80
+August,Texas,eggs,46
+September,Texas,eggs,59
+October,Texas,eggs,1
+November,Texas,eggs,40
+December,Texas,eggs,16
+January,California,spam,76
+February,California,spam,99
+March,California,spam,7
+April,California,spam,58
+May,California,spam,24
+June,California,spam,47
+August,California,spam,27
+September,California,spam,10
+November,California,spam,57
+December,California,spam,64
+January,California,eggs,30
+February,California,eggs,80
+March,California,eggs,95
+April,California,eggs,13
+June,California,eggs,92
+July,California,eggs,74
+September,California,eggs,87
+November,California,eggs,67
